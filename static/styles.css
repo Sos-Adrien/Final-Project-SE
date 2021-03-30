@@ -1,0 +1,569 @@
+body {
+    margin-left: 0rem;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.header {
+    background-color: #A1CBF7;
+    border-radius: 25px;
+}
+
+.header2 {
+    display: block;
+    background-color: #A1CBF7;
+    margin-top: -40px;
+}
+
+.topbanner {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-right: 0px;
+    width: 100%;
+    min-height: 100px;
+    height: 280px;
+    background-color: #A1CBF7;
+    border-radius: 15px
+}
+
+.topbannertext {
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 10rem;
+    margin-bottom: -40px;
+    background-color: #707070;
+    border-radius: 25px;
+}
+
+.footer2 {
+    display: block;
+    height: 40px;
+    margin-bottom: -40px;
+    background-color: #707070;
+}
+
+
+
+/* below import nmy personal front */
+
+@font-face {
+    font-family: MyWebFont;
+    src: local('Ubuntu-Medium'), url('/font/Ubuntu/Ubuntu-Medium.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: MyWebFontRegular;
+    src: local('Ubuntu-Regular'), url('/font/Ubuntu/Ubuntu-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: MyWebFontLight;
+    src: local('Ubuntu-Light'), url('/font/Ubuntu/Ubuntu-Light.ttf') format('truetype'); 
+}
+
+/*below are all " h text " for the all page */
+
+h1 {
+    font-family: MyWebFont;
+    display: block;
+    color:white; 
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:white; 
+    font-size: 20px;
+    margin-top: 0px;
+    max-width: 400px;
+}
+
+h3 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:#9ED0FB; 
+    font-size: 16px;
+    margin-top: 0px;
+    max-width: 400px;
+}
+
+h4 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:#A3E6DE; 
+    font-size: 16px;
+    margin-top: 0px;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+h5 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:#9AE3B4; 
+    font-size: 16px;
+    margin-top: 0px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+h6 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:#C2E69C; 
+    font-size: 16px;
+    margin-top: 0px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+h7 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:#F2D493; 
+    font-size: 16px;
+    margin-top: 0px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+h8 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:#FEC4B0; 
+    font-size: 16px;
+    margin-top: 0px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+h9 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:#95CDFB; 
+    font-size: 16px;
+    margin-top: 0px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+h10 {
+    font-size: auto;
+}
+
+h11 {
+    font-size: 14px;
+    color: #707070;
+}
+
+/*images css for the firsts ection stuff below */
+
+.logotop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: -40px;
+}
+
+.imagetop{
+    width: 8%;
+    min-width: 60px;
+    height: auto;
+}
+
+.imageDescription1{
+    width: 50%;
+    min-width: 130px;
+    max-width: 140px;
+    display: block;
+    height: auto;
+}
+
+.imageDescription2{
+    width: 30%;
+    min-width: 90px;
+    display: block;
+    height: auto;
+}
+
+.imageDescription3{
+    width: 20%;
+    min-width: 60px;
+    display: block;
+    height: auto;
+    transform: rotate(45deg);
+}
+
+/*grid explanation section 1 css stuff below */
+
+.container{
+    display: grid;
+    height: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 2.2fr;
+    grid-template-areas:
+    "top top top" 
+    "content1 content2 content3";
+    grid-gap: 2em;
+    font-family: MyWebFont;
+    margin-top: 2%;
+}
+
+#top{
+    background-color: white;
+    grid-area:top;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 20px;
+    color: #707070;
+    margin-bottom: -30px;
+}
+
+#content1{
+    background-color:white;
+    grid-area:content1;
+    text-align: center;
+
+}
+
+#content2{
+    background-color: white;
+    grid-area:content2;
+    text-align: center;
+
+}
+
+#content3{
+    background-color: white;
+    grid-area:content3;
+    text-align: center;
+
+}
+
+.incontainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 550px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1.2fr 1.2fr;
+        grid-template-areas:
+            "top"
+            "content1"
+            "content2"
+            "content3";
+    }
+}
+
+/* section 2 for order below */
+
+.section2{
+    margin-top: 10%;
+    font-family: MyWebFont;
+    font-size: 20px;
+    color: #707070;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer{
+    display: grid;
+    height: 700px;
+    margin-top: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
+    border-radius: 10px;
+
+    box-shadow:
+     0px 10px 20px rgba(179, 179, 179, 0.233),
+     0px 10px 20px rgba(121, 121, 121, 0.233);
+  
+}
+
+/*grid Why Greenit section 3 css stuff below */
+
+.containerWhy{
+    display: grid;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr;
+    grid-template-areas:
+    "why1 why2 why3 why4"
+    "textWhy1 textWhy2 textWhy3 textWhy4";
+    grid-gap: 0em;
+}
+
+#why1{
+    background-color:white;
+    grid-area:why1;
+    text-align: center;
+
+}
+
+#why2{
+    background-color: white;
+    grid-area:why2;
+    text-align: center;
+
+}
+
+#why3{
+    background-color: white;
+    grid-area:why3;
+    text-align: center;
+
+}
+
+#why4{
+    background-color: white;
+    grid-area:why4;
+    text-align: center;
+
+}
+
+#textWhy1{
+    background-color:white;
+    grid-area:textWhy1;
+    text-align: center;
+}
+
+#textWhy2{
+    background-color:white;
+    grid-area:textWhy2;
+    text-align: center;
+}
+
+#textWhy3{
+    background-color:white;
+    grid-area:textWhy3;
+    text-align: center;
+}
+
+#textWhy4{
+    background-color:white;
+    grid-area:textWhy4;
+    text-align: center;
+}
+
+@media only screen and (max-width: 550px) {
+    .containerWhy{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr;
+        grid-template-areas:
+            "why1"
+            "textWhy1"
+            "why2"
+            "textWhy2"
+            "why3"
+            "textWhy3"
+            "why4"
+            "textWhy4";
+    }
+}
+
+/*image css for the section 3 below */
+
+.imageWhy1{
+    width: 40%;
+    margin-top: 5px;
+    min-width: 60px;
+    max-width: 130px;
+    display: block;
+    height: auto;
+}
+
+.imageWhy2{
+    width: 40%;
+    margin-top: 5px;
+    min-width: 60px;
+    max-width: 110px;
+    display: block;
+    height: auto;
+}
+
+.imageWhy3{
+    width: 35%;
+    margin-top: 5px;
+    min-width: 50px;
+    max-width: 130px;
+    display: block;
+    height: auto;
+}
+
+.imageWhy4{
+    width: 40%;
+    min-width: 80px;
+    max-width: 150px;
+    display: block;
+    height: auto;
+}
+
+.WrapEndSection3 {
+    display: flex;
+    justify-content: center;
+}
+
+.endSection3 {
+    margin-top: 20px;
+    width: 40%;
+    min-width: 200px;
+    height: auto;
+    text-align: center;
+    color: #707070;
+    font-family: MyWebFontLight;
+    font-size: 16px;
+}
+
+.button {
+    width: 80%;
+    background-color: #C2E69C;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/*all css for the FAQ section 4 below */
+
+
+
+.containerFAQ{
+    display: grid;
+    height: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas: 
+    "question1 answer1"
+    "question2 answer2"
+    "question3 answer3"
+    "question4 answer4"
+    "question5 answer5";
+    grid-gap: 2em;
+    margin-top: 4%;
+}
+
+#question1{
+    background-color: white;
+    grid-area:question1;
+    text-align:center;
+    font-family: MyWebFont;
+
+}
+
+#question2{
+    background-color:white;
+    grid-area:question2;
+    text-align: center;
+    font-family: MyWebFont;
+
+}
+
+#question3{
+    background-color:white;
+    grid-area:question3;
+    text-align: center;
+    font-family: MyWebFont;
+
+}
+
+#question4{
+    background-color:white;
+    grid-area:question4;
+    text-align: center;
+    font-family: MyWebFont;
+
+}
+
+#question5{
+    background-color:white;
+    grid-area:question5;
+    text-align: center;
+    font-family: MyWebFont;
+
+}
+
+#answer1{
+    background-color:white;
+    grid-area:answer1;
+    text-align: left;
+    font-family: MyWebFontLight;
+
+}
+
+#answer2{
+    background-color:white;
+    grid-area:answer2;
+    text-align: left;
+    font-family: MyWebFontLight;
+
+}
+
+#answer3{
+    background-color:white;
+    grid-area:answer3;
+    text-align: left;
+    font-family: MyWebFontLight;
+
+}
+
+#answer4{
+    background-color:white;
+    grid-area:answer4;
+    text-align: left;
+    font-family: MyWebFontLight;
+
+}
+
+#answer5{
+    background-color:white;
+    grid-area:answer5;
+    text-align: left;
+    font-family: MyWebFontLight;
+
+}
+
+@media only screen and (max-width: 550px) {
+    .containerFAQ{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr;
+        grid-template-areas:
+            "question1"
+            "answer1"
+            "question2"
+            "answer2"
+            "question3"
+            "answer3"
+            "question4"
+            "answer4"
+            "question5"
+            "answer5";
+    }
+}

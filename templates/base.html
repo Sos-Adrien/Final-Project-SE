@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- the page title will be a varible passed to the render_template() function for each page separately-->
+    <title> {{ page_title }}</title>
+  	<meta charset="utf-8"/>
+    <!-- include the css from the file static/style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  
+  <body>
+
+  <!-- this headline will appear on all pages. -->
+  
+  <header class="header2">
+  </header>
+
+  <header class="header">
+    <div class="topbanner">
+      <div class="topbannertext">
+        <h1> Greenit </h1>
+        <h2> New healthy, social and sustainable consumption. </h2>
+      </div> 
+    </div>
+    
+    <div class="logotop">
+      <img src="https://1.bp.blogspot.com/-HvynhE-Oa7c/YGHiwYxBCwI/AAAAAAAAAJs/Y05-0LJU8Vg6EZHOvUt9do6w6Sf0ygMIQCLcBGAsYHQ/s1064/logo.png" class="imagetop"> 
+    </div>
+    
+  </header>
+  
+  <div class="container">
+
+    <div id="top">How does it work?</div>
+
+    <div id="content1">
+      <h3>Customize your product for your needs</h3>
+      <div class="incontainer">
+        <img src="{{ url_for('static', filename='images/soap.png') }}" class="imageDescription1">
+      </div>
+       
+    </div>
+    
+    <div id="content2">
+      <h4>Subscribe to your local producer</h4>
+      <div class="incontainer">
+        <img src="{{ url_for('static', filename='images/murser.png') }}" class="imageDescription2">
+      </div>    
+    </div>
+    
+    <div id="content3">
+      <h5>Get your homemade products every months</h5>
+      <div class="incontainer">
+        <img src="{{ url_for('static', filename='images/getStarted.png') }}" class="imageDescription3">
+      </div>    
+    </div>
+
+  </div>
+
+  <div class="section2">
+    Give it a try!
+  </div>
+
+  <div class="mainContainer">
+    Test !
+  </div>
+
+  <div class="section2">
+    Why using Greenit?
+  </div>
+
+  <div class="containerWhy">
+
+    <div id="why1">
+      
+      <div class="incontainer">
+        <img src="{{ url_for('static', filename='images/planet.png') }}" class="imageWhy1">
+      </div>
+    </div> 
+    
+    <div id="textWhy1">
+      <h6>For your planet</h6>
+    </div>
+    
+    <div id="why2">
+
+      <div class="incontainer">
+        <img src="{{ url_for('static', filename='images/body.png') }}" class="imageWhy2">
+      </div> 
+
+    </div>
+    
+    <div id="textWhy2">
+      <h7>For your body</h7>
+    </div>
+    
+    
+    <div id="why3">
+  
+      <div class="incontainer">
+        <img src="{{ url_for('static', filename='images/money.png') }}" class="imageWhy3">
+      </div>
+     
+    </div>
+
+    <div id="textWhy3">
+      <h8>For your money</h8>
+    </div>
+
+    <div id="why4">
+  
+      <div class="incontainer">
+        <img src="{{ url_for('static', filename='images/wellbeing.png') }}" class="imageWhy4">
+      </div>
+    
+    </div>
+    
+    <div id="textWhy4">
+      <h9>For your wellbeing</h9>
+    </div>
+
+  </div>
+
+  <div class="WrapEndSection3">
+
+    <div class="endSection3">
+      Greenit is a student project for the development of healthy consumption ways
+    </div>
+
+  </div>
+
+  <div class="WrapEndSection3">  
+   
+    <div>
+
+      <div class="endSection3">
+        <button class="button"> <h10>Read more</h10> </button>
+      </div>
+      
+    </div>
+  
+  </div>
+
+  <div class="section2">
+    FAQ
+  </div>
+
+  
+  <div class="containerFAQ">
+
+    <div id="question1">
+      <h11>What about allergies and danger using those homemade products?</h11>   
+    </div>
+
+    <div id="answer1">
+      <h11> We associate cosmetic/hygiene products with allergies and danger for the reason that the ingredients used
+        in there are toxic. Those toxic ingredients in industrial products are the one we should be worry about. 
+        All products available on this website are made with fully natural ingredients. No Sodium-Sulfat or Hydroxybenzhylaminil here.
+        Furthermore, we have already been tested all products.</h11>   
+    </div>
+    
+    <div id="question2">
+      <h11>question here</h11>   
+    </div>
+
+    <div id="answer2">
+      <h11>answer here</h11>   
+    </div>
+
+    <div id="question3">
+      <h11>question here</h11>   
+    </div>
+
+    <div id="answer3">
+      <h11>answer here</h11>   
+    </div>
+
+    <div id="question4">
+      <h11>question here </h11>   
+    </div>
+   
+    <div id="answer4">
+      <h11>answer here</h11>   
+    </div>
+
+    <div id="question5">
+      <h11>question here</h11>   
+    </div>
+
+    <div id="answer5">
+      <h11>answer here</h11>   
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <h2> Greenit MVP foundations fall 2020 </h2>
+  </footer>
+
+  <footer class="footer2">
+  </footer>
+  
+</body>
