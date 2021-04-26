@@ -984,25 +984,6 @@ select{
     -webkit-appearance:none; /* Safari and Chrome */
     appearance:none;
 }
-
-.select:after {
-    /* [HTML symbol you want to use] */
-    content: "\25bc";
-    color: #888;
-    font-size: 15px;
-    /* Positioning for the custom arrow */
-    padding: 12px 8px;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    text-align: center;
-    pointer-events: none;
-}
-  
-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #000;
-}
   
 /*all css for the slider section 2 below */
 
