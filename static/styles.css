@@ -16,32 +16,34 @@ body {
 }
 
 .topbanner {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
+    display: flex;
     margin-top: 0px;
     margin-right: 0px;
     width: 100%;
-    min-height: 100px;
-    height: 280px;
+    min-height: 350px;
+    height: auto;
     background-color: #A1CBF7;
-    border-radius: 15px
+    border-radius: 15px;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .topbannertext {
+    display: inline;
     text-align: center;
-    margin-top: 10%;
+    width: 80%;
 }
 
 
 .footer {
     display: flex;
+    -webkit-box-pack: center;
     justify-content: center;
-    align-items: center;
     height: 200px;
     margin-top: 10rem;
     margin-bottom: -40px;
-    background-color: #707070;
+    background-color: #9b9b9b;
     border-radius: 25px;
 }
 
@@ -49,12 +51,12 @@ body {
     display: block;
     height: 40px;
     margin-bottom: -40px;
-    background-color: #707070;
+    background-color: #9b9b9b;
 }
 
 
 
-/* below import nmy personal front */
+/* below import my personal font */
 
 @font-face {
     font-family: MyWebFont;
@@ -71,31 +73,36 @@ body {
     src: local('Ubuntu-Light'), url('/font/Ubuntu/Ubuntu-Light.ttf') format('truetype'); 
 }
 
+@font-face {
+    font-family: MyWebFontLightItalic;
+    src: local('Ubuntu-LightItalic'), url('/font/Ubuntu/Ubuntu-LightItalic.ttf') format('truetype'); 
+}
+
 /*below are all " h text " for the all page */
 
 h1 {
-    font-family: MyWebFont;
+    font-family: MyWebFontRegular;
     display: block;
     color:white; 
-    font-size: 40px;
+    font-size: 60px;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 h2 {
     font-family: MyWebFontRegular;
     display: inline-block;
     color:white; 
-    font-size: 20px;
+    font-size: 23px;
     margin-top: 0px;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 h3 {
     font-family: MyWebFontRegular;
     display: inline-block;
     color:#9ED0FB; 
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 0px;
     max-width: 400px;
 }
@@ -104,7 +111,7 @@ h4 {
     font-family: MyWebFontRegular;
     display: inline-block;
     color:#A3E6DE; 
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 0px;
     max-width: 400px;
     margin-bottom: 30px;
@@ -114,7 +121,7 @@ h5 {
     font-family: MyWebFontRegular;
     display: inline-block;
     color:#9AE3B4; 
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 0px;
     max-width: 400px;
     margin-bottom: 20px;
@@ -167,9 +174,78 @@ h10 {
 h11 {
     font-size: 14px;
     color: #707070;
+    font-family: MyWebFontRegular;
 }
 
-/*images css for the firsts ection stuff below */
+/*h12 is "Berlin" */
+h12 {
+    font-family: MyWebFontRegular;
+    display: inline-block;
+    color:#707070; 
+    font-size: 16px;
+    margin-bottom: 2vh;
+}
+
+/*h13 is "Producer" */
+h13 {
+    font-family: MyWebFont;
+    display: inline-block;
+    color:#707070; 
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/*h14 is "Adrien" */
+h14 {
+    font-family: MyWebFont;
+    display: inline-block;
+    color:#95CDFB; 
+    font-size: auto;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+h15 {
+    font-family: MyWebFontLightItalic;
+    display: inline-block;
+    color:#707070; 
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+h16 {
+    font-family: MyWebFont;
+    display: inline-block;
+    color:#707070; 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h17 {
+    font-family: MyWebFont;
+    display: inline-block;
+    color:#707070; 
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+}
+
+h18 {
+    font-family: MyWebFont;
+    display: inline-block;
+    color:#A3E6DE; 
+    font-size: auto;
+    margin-top: 0px;
+}
+
+h19 {
+    color: white;
+    font-family: MyWebFontLight;
+    font-size: 16px;
+}
+
+/*images css for the first section stuff below */
 
 .logotop{
     width: 100%;
@@ -181,7 +257,8 @@ h11 {
 
 .imagetop{
     width: 8%;
-    min-width: 60px;
+    min-width: 80px;
+    max-width: 110px;
     height: auto;
 }
 
@@ -191,6 +268,8 @@ h11 {
     max-width: 140px;
     display: block;
     height: auto;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
 }
 
 .imageDescription2{
@@ -198,6 +277,8 @@ h11 {
     min-width: 90px;
     display: block;
     height: auto;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
 }
 
 .imageDescription3{
@@ -206,6 +287,21 @@ h11 {
     display: block;
     height: auto;
     transform: rotate(45deg);
+}
+
+.imageDescription4{
+    width: 10%;
+    min-width: 90px;
+    display: block;
+    height: auto;
+}
+
+.imageDescriptionSub{
+    width: 70%;
+    min-width: 170px;
+    max-width: 200px;
+    display: block;
+    height: auto;
 }
 
 /*grid explanation section 1 css stuff below */
@@ -278,7 +374,7 @@ h11 {
 /* section 2 for order below */
 
 .section2{
-    margin-top: 10%;
+    margin-top: 10vh;
     font-family: MyWebFont;
     font-size: 20px;
     color: #707070;
@@ -287,9 +383,14 @@ h11 {
 }
 
 .mainContainer{
-    display: grid;
-    height: 700px;
-    margin-top: 50px;
+    display:flex;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    min-height: 400px;
+    margin-top: 10px;
     margin-left: 8%;
     margin-right: 8%;
     border-radius: 10px;
@@ -320,7 +421,6 @@ h11 {
     background-color:white;
     grid-area:why1;
     text-align: center;
-
 }
 
 #why2{
@@ -383,6 +483,7 @@ h11 {
             "textWhy4";
     }
 }
+
 
 /*image css for the section 3 below */
 
@@ -449,9 +550,8 @@ h11 {
     border-radius: 10px;
 }
 
+
 /*all css for the FAQ section 4 below */
-
-
 
 .containerFAQ{
     display: grid;
@@ -567,3 +667,688 @@ h11 {
             "answer5";
     }
 }
+
+/* Container grid for order page 1 */
+
+.containerOrder{
+    display: grid;
+    height: auto;
+    width: 100%;
+    margin-top: 1%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.4fr;
+    grid-template-areas: 
+        "nav1 nav2 nav2 nav2 nav3"
+        "box box box1 box2 box3"
+        "box4 box4 box5 box6 box7"
+        "box8 box8 box9 box10 box11"
+        "btom btom btom btom btom";
+    grid-gap: 0.2rem;
+}
+
+#btom{
+    background-color:white;
+    grid-area: btom;
+    align-content: center;
+    display: inline-flex;
+}
+
+#nav1{
+    background-color:white;
+    grid-area: nav1;
+    display: flex;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+    max-width: 200px;
+}
+
+#nav2{
+    background-color: white;
+    grid-area: nav2;
+}
+
+#nav3{
+    background-color: white;
+    grid-area: nav3;
+}
+
+#box{
+    background-color: white;
+    grid-area: box;
+    padding: 3px;
+    margin-top: 20px;
+}
+
+#box1{
+    background-color:white;
+    grid-area: box1;
+}
+
+#box2{
+    background-color:white;
+    grid-area: box2;
+}
+
+#box3{
+    background-color:white;
+    grid-area: box3;
+}
+
+#box4{
+    background-color:white;
+    grid-area: box4;
+    margin-top: 50px;
+}
+
+#box5{
+    background-color:white;
+    grid-area: box5;
+}
+
+#box6{
+    background-color:white;
+    grid-area: box6;
+}
+
+#box7{
+    background-color:white;
+    grid-area: box7;
+}
+
+#box8{
+    background-color:white;
+    grid-area: box8;
+    margin-top: 50px;
+}
+
+#box9{
+    background-color:white;
+    grid-area: box9;
+}
+
+#box10{
+    background-color:white;
+    grid-area: box10;
+}
+
+#box11{
+    background-color:white;
+    grid-area: box11;
+}
+
+@media only screen and (max-width: 780px) {
+    .containerOrder{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 0.7fr 0.7fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.4fr;
+        grid-template-areas:
+            "nav1"
+            "nav2"
+            "nav3"
+            "box"
+            "box1"
+            "box2"
+            "box3"
+            "box4"
+            "box5"
+            "box6"
+            "box7"
+            "box8"
+            "box9"
+            "box10"
+            "box11"
+            "btom";
+    }
+}
+
+.footerMC{
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+.ProducerDiv{
+    width: 100%;
+    display: block;
+    align-items: center;
+}
+
+.ProducerDiv1{
+    width: 100%;
+    margin-left: 40px;
+    margin-bottom: -10px;
+}
+
+.ProducerDiv2{
+    width: 100%;
+}
+
+#leftDiv {
+    float: left;
+    width: auto;
+    overflow: hidden;
+    margin-left: 15%;
+}
+  
+#rightDiv {
+    float: right;
+    width: 40%;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.EngagementDiv{
+    padding: 10px;
+    margin-top: 5%;
+}
+
+#leftDivProd {
+    float: left;
+    width: auto;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-right: 25px;
+}
+  
+#rightDivProd {
+    width: 40%;
+    text-align: left;
+    overflow: hidden;
+    min-width: 180px;
+}
+
+.TOHdiv {
+    width: auto;
+    padding: 5px;
+    margin-top: 35px;
+    text-align: center;
+    align-items: center;
+    display: block;
+}
+
+.TOHdiv2 {
+    width: auto;
+    padding: 5px;
+    margin-top: 5px;
+    text-align: center;
+    align-items: center;
+    display: block;
+}
+
+/* hover text information for product 1 & 2  **/
+
+.dropbtn {
+    margin-top: 4px;
+    display: inline;
+    width: 12%;
+    height: 12%;
+}
+  
+.dropdown {
+    display: inline-block;
+    position: absolute;
+    height: auto;
+}
+  
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    font-family: MyWebFontLight;
+    font-size: 11px;
+    width: 220px;
+    height: auto;
+    padding: 5%;
+    border-radius: 10px;
+    margin-left: -150px;
+    box-shadow:
+     0px 10px 20px rgba(179, 179, 179, 0.233),
+     0px 10px 20px rgba(121, 121, 121, 0.233);
+}
+
+.dropdown-content a {
+    color: black;
+    font-family: MyWebFontLight;
+    text-decoration: none;
+    display:flex;
+    position:relative;
+    overflow-y: overlay;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color:none;}
+
+/* hover text information for product3 **/
+
+.dropbtnCream {
+    margin-top: 4px;
+    display: inline;
+    width: 12%;
+    height: 12%;
+}
+  
+.dropdownCream {
+    display: inline-block;
+    position: absolute;
+    height: auto;
+}
+  
+.dropdownCream-content {
+    display: none;
+    background-color: #f1f1f1;
+    font-family: MyWebFontLight;
+    font-size: 11px;
+    width: 220px;
+    height: auto;
+    padding: 5%;
+    border-radius: 10px;
+    margin-left: -110px;
+    box-shadow:
+     0px 10px 20px rgba(179, 179, 179, 0.233),
+     0px 10px 20px rgba(121, 121, 121, 0.233);
+}
+
+.dropdownCream-content a {
+    color: black;
+    font-family: MyWebFontLight;
+    text-decoration: none;
+    display:flex;
+    position:relative;
+    overflow-y: overlay;
+}
+  
+.dropdownCream-content a:hover {background-color: #ddd;}
+  
+.dropdownCream:hover .dropdownCream-content {display: block;}
+  
+.dropdownCream:hover .dropbtnCream {background-color:none;}
+
+
+/* Dropdown button for user choice **/
+select{
+    text-align: center;
+    font-size: 16px;
+    font-family: MyWebFontRegular;
+    color:#707070;
+    background-color: white;
+    border:2px solid #acacac;
+    border-radius: 5px;
+    width: 140px;
+    height: 35px;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+.select:after {
+    /* [HTML symbol you want to use] */
+    content: "\25bc";
+    color: #888;
+    font-size: 15px;
+    /* Positioning for the custom arrow */
+    padding: 12px 8px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    text-align: center;
+    pointer-events: none;
+}
+  
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+  
+/*all css for the slider section 2 below */
+
+/* Container grid for order page 2 */
+
+.containerOrderP2{
+    display: grid;
+    height: auto;
+    width: 80%;
+    margin-left: 15%;
+    margin-top: 1%;
+    padding: 1%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.8fr 0.8fr 0.8fr 0.4fr;
+    grid-template-areas:
+        "navi0 navi0"
+        "navi1 navi3"
+        "boxi boxi3"
+        "boxi4 boxi7"
+        "boxi8 boxi11"
+        "btomi btomi";
+    grid-gap: 0rem;
+}
+
+#btomi{
+    background-color:white;
+    grid-area: btomi;
+    align-content: center;
+    display: inline-flex;
+}
+
+#navi0{
+    background-color:white;
+    grid-area: navi0;
+    align-content: center;
+    display: inline-flex;
+}
+
+#navi1{
+    background-color:white;
+    grid-area: navi1;
+    align-items: center;
+    display: inline-flex;
+}
+
+#navi2{
+    background-color: white;
+    grid-area: navi2;
+}
+
+#navi3{
+    background-color: white;
+    grid-area: navi3;
+}
+
+#boxi{
+    background-color: white;
+    grid-area: boxi;
+}
+
+#boxi2{
+    background-color:white;
+    grid-area: boxi2;
+}
+
+#boxi3{
+    background-color:white;
+    grid-area: boxi3;
+}
+
+#boxi4{
+    background-color:white;
+    grid-area: boxi4;
+}
+
+#boxi6{
+    background-color:white;
+    grid-area: boxi6;
+}
+
+#boxi7{
+    background-color:white;
+    grid-area: boxi7;
+}
+
+#boxi8{
+    background-color:white;
+    grid-area: boxi8;
+}
+
+#boxi10{
+    background-color:white;
+    grid-area: boxi10;
+}
+
+#boxi11{
+    background-color:white;
+    grid-area: boxi11;
+}
+
+@media only screen and (max-width: 780px) {
+    .containerOrderP2{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.6fr 1fr 1fr 1fr 0.2fr 1fr 0.8fr 1fr 0.4fr;
+        grid-template-areas:
+            "navi0"
+            "navi1" 
+            "boxi"
+            "boxi4"
+            "boxi8"
+            "navi3"          
+            "boxi3" 
+            "boxi7"
+            "boxi11"
+            "btomi";
+    }
+}
+
+.InformationDiv{
+    padding: 20px;
+}
+
+.almsotcenter{
+    width: 100%;
+    text-align: left;
+    margin-top: 4%;
+}
+
+.CenterOrderP2{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    width: 80%;
+}
+
+input {
+    width: auto;
+    text-align: center;
+    font-size: 14px;
+    font-family: MyWebFontRegular;
+    color:#707070;
+    background-color: white;
+    border:2px solid #acacac;
+    border-radius: 5px;
+    height: 35px;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+#messageform{
+    width: auto;
+    text-align: center;
+    font-size: 14px;
+    font-family: MyWebFontRegular;
+    color:#707070;
+    background-color: white;
+    border:2px solid #acacac;
+    border-radius: 5px;
+    height: 100px;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+.divmargin{
+    margin-left: 4%;
+}
+
+.ButtonsSlider{
+    display: inline;
+    width: 100%;
+    align-items: center;
+}
+
+.Inlinediv{
+    display: inline;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Inlinediv2{
+    display: inline;
+    width: 100%;
+    height: 100px;
+    padding: 2%;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.button2 {
+    width: 180px;
+    height: 45px;
+    background-color: #95CDFB;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+
+.thankYouPage{
+    font-family: MyWebFont;
+    font-size: 18px;
+    color: #777777;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.thankYouPage2{
+    font-family: MyWebFontRegular;
+    font-size: 18px;
+    color: #777777;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttonNext {
+    width: 140px;
+    height: 40px;
+    margin: 4px;
+    background-color: #95CDFB;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.SubmitButton {
+    width: 140px;
+    height: 40px;
+    margin: 4px;
+    background-color: #C2E69C;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.buttonPrev {
+    width: 140px;
+    height: 40px;
+    margin: 4px;
+    background-color: #999999;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* Container grid for order page 3 */
+
+.containerOrderP3{
+    display: grid;
+    height: auto;
+    width: auto;
+    margin-top: 1%;
+    padding: 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.8fr 0.2fr 8fr 0.2fr;
+    grid-template-areas:
+        "in1"
+        "in2"
+        "in3"
+        "in4"
+        "btom";
+    grid-gap: 0.2rem;
+}
+
+#btom{
+    background-color:white;
+    grid-area: btom;
+    width: 100%;
+    align-content: center;
+    display: inline-flex;
+}
+
+#in1{
+    background-color:white;
+    grid-area: in1;
+    width: 100%;
+    align-content: center;
+    display: inline-flex;
+}
+
+#in2{
+    background-color:white;
+    grid-area: in2;
+    width: 100%;
+    align-items: center;
+    display: inline-flex;
+}
+
+#in3{
+    background-color:white;
+    grid-area: in3;
+    width: 100%;
+    align-items: center;
+    display: inline-flex;
+}
+
+#in4{
+    background-color:white;
+    grid-area: in4;
+    width: 100%;
+    align-items: center;
+    display: inline-flex;
+}
+
+@media only screen and (max-width: 550px) {
+    .containerOrderP3{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.8fr 0.2fr 8fr 0.2fr;
+        grid-template-areas:
+        "in1"
+        "in2"
+        "in3"
+        "in4"
+        "btom";
+    }
+}
+
+.responsive-iframe{
+    width:80%;
+    min-width:280px;
+    height:1380px;
+    border:0;
+}
+

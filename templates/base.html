@@ -4,200 +4,741 @@
     <!-- the page title will be a varible passed to the render_template() function for each page separately-->
     <title> {{ page_title }}</title>
   	<meta charset="utf-8"/>
+
     <!-- include the css from the file static/style.css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
   </head>
-  
+
   <body>
-
-  <!-- this headline will appear on all pages. -->
   
-  <header class="header2">
-  </header>
+    <header class="header2">
+    </header>
 
-  <header class="header">
-    <div class="topbanner">
-      <div class="topbannertext">
-        <h1> Greenit </h1>
-        <h2> New healthy, social and sustainable consumption. </h2>
-      </div> 
-    </div>
-    
-    <div class="logotop">
-      <img src="https://1.bp.blogspot.com/-HvynhE-Oa7c/YGHiwYxBCwI/AAAAAAAAAJs/Y05-0LJU8Vg6EZHOvUt9do6w6Sf0ygMIQCLcBGAsYHQ/s1064/logo.png" class="imagetop"> 
-    </div>
-    
-  </header>
-  
-  <div class="container">
-
-    <div id="top">How does it work?</div>
-
-    <div id="content1">
-      <h3>Customize your product for your needs</h3>
-      <div class="incontainer">
-        <img src="{{ url_for('static', filename='images/soap.png') }}" class="imageDescription1">
+    <header class="header">
+      <div class="topbanner">
+        <div class="topbannertext">
+          <h1> Greenit </h1>
+          <h2> New healthy, social and sustainable consumption. </h2>
+        </div> 
       </div>
-       
-    </div>
-    
-    <div id="content2">
-      <h4>Subscribe to your local producer</h4>
-      <div class="incontainer">
-        <img src="{{ url_for('static', filename='images/murser.png') }}" class="imageDescription2">
-      </div>    
-    </div>
-    
-    <div id="content3">
-      <h5>Get your homemade products every months</h5>
-      <div class="incontainer">
-        <img src="{{ url_for('static', filename='images/getStarted.png') }}" class="imageDescription3">
-      </div>    
-    </div>
-
-  </div>
-
-  <div class="section2">
-    Give it a try!
-  </div>
-
-  <div class="mainContainer">
-    Test !
-  </div>
-
-  <div class="section2">
-    Why using Greenit?
-  </div>
-
-  <div class="containerWhy">
-
-    <div id="why1">
       
-      <div class="incontainer">
-        <img src="{{ url_for('static', filename='images/planet.png') }}" class="imageWhy1">
+      <div class="logotop">
+        <img src="https://1.bp.blogspot.com/-HvynhE-Oa7c/YGHiwYxBCwI/AAAAAAAAAJs/Y05-0LJU8Vg6EZHOvUt9do6w6Sf0ygMIQCLcBGAsYHQ/s1064/logo.png" class="imagetop"> 
       </div>
-    </div> 
+      
+    </header>
     
-    <div id="textWhy1">
-      <h6>For your planet</h6>
-    </div>
-    
-    <div id="why2">
+    <div class="container">
 
-      <div class="incontainer">
-        <img src="{{ url_for('static', filename='images/body.png') }}" class="imageWhy2">
+      <div id="top">How does it work?</div>
+
+      <div id="content1">
+        <h3>Customize your product for your needs</h3>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/soap.png') }}" class="imageDescription1">
+        </div>
+        <div class="incontainer">
+          <img src="/static/images/subimage1.png" class="imageDescriptionSub">
+        </div>
+        
+      </div>
+      
+      <div id="content2">
+        <h4>Subscribe to your local producer</h4>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/murser.png') }}" class="imageDescription2">
+        </div> 
+        <div class="incontainer">
+          <img src="/static/images/subimage2.png" class="imageDescriptionSub">
+        </div>   
+      </div>
+      
+      <div id="content3">
+        <h5>Get your homemade products every months</h5>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/getStarted.png') }}" class="imageDescription3">
+        </div>  
+        <div class="incontainer">
+          <img src="/static/images/subimage3.png" class="imageDescriptionSub">
+        </div>  
+      </div>
+
+    </div>
+
+    <div class="section2">
+      Give it a try!
+    </div>
+    <br>
+
+    <div class="mainContainer" id="main">
+      <div class="Inlinediv">
+        <div class="containerOrder" id="container0">
+          <!-- Producer top left square -->
+          <div id="nav1">
+            <div class="ProducerDiv">
+              <div class="ProducerDiv1">
+                <h13>Producer</h13><br>
+              </div>
+
+              <div class="ProducerDiv2">
+                <div id="leftDiv">
+                  <img src="/static/images/photo profil.png" alt="Photo" width="70px"><img/>
+                </div>
+                <div id="rightDiv">
+                  <h14>Adrien</h14><br>
+                  <h12>Berlin</h12>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Engagement producer text square -->
+          <div id="nav2">
+            <div class="EngagementDiv">
+              <h12>Engagement:</h12><br>
+              <h11>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+              ex ea commodo consequat. 
+              </h11> 
+            </div>
+          </div>
+
+          <!-- Contact Producer top left square -->
+          <div id="nav3">
+            <div class="EngagementDiv">
+              <h12>Contact me:</h12><br>
+              <h11> Adress any questions via email:</h11><br>
+              <h15>hellogreenit@gmail.com</h15><br>
+              <h11> or on slack:</h11><br>
+              <h15>Adrien Sosson</h15><br>
+            </div>
+          </div>
+          
+          <!-- First Product description -->
+          <div id="box">
+            <div class="ProducerDiv1">
+              <h13>Products</h13>
+            </div>
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/ShampooPic.jpg" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Shampoo Solid</h16> &nbsp &nbsp
+                <div class="dropdown">
+                  <img src="/static/images/imginfo.png" alt="info" class="dropbtn"></img>
+                  <div class="dropdown-content">
+                    <p>content en masseVegetal oil of Fenugreek,  coconut tensioactif,  water,
+                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,  
+                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
+                        Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder. </p> 
+                  </div>
+                </div>
+                <br>
+                <h11 id="priceShampoo"> 2.50€ / piece</h11><br>
+                <h11>
+                  Ingredients:<br>
+                  Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
+                </h11>
+              </div>
+            </div>
+          </div>
+
+          <!-- First Product Type of hair -->
+          <div id="box1">
+            <div class="TOHdiv">
+              <h16>Type of hair</h16><br>
+            </div>
+            
+            <div class="TOHdiv2">
+              <select name="TypeOfHair" id="SelectTypeOfHair">
+                {% for TypeHair in DataHairType %}
+                  <option> {{ TypeHair.value }} </option>
+                {% endfor %}
+              </select>
+            </div>              
+          </div>
+
+          <!-- First Product Flavor Choice -->
+          <div id="box2">
+            <div class="TOHdiv">
+              <h16>Flavor</h16><br>
+            </div>
+            
+            <div class="TOHdiv2">
+              <select name="FlavorOfHair" id="HairSelectFlavor">
+                {% for HairFlavor in DataHairFlavor %}
+                  <option> {{ HairFlavor.value }} </option>
+                {% endfor %}
+              
+              </select>
+            </div> 
+          </div>
+          
+          <!-- First Product Quantity Choice -->
+
+          <div id="box3">
+            <div class="TOHdiv">
+              <h16>Quantity</h16><br>
+            </div>
+            
+            <div class="TOHdiv2">
+              <select name="Quantity" id="HairSelectQuantity">
+                <option value="quantity0"> 0 piece </option>
+                <option value="quantity1"> 1 piece </option>
+                <option value="quantity2"> 2 pieces </option>
+                <option value="quantity3"> 3 pieces </option>
+              </select>
+            </div> 
+
+          </div>
+
+          <!-- Second Product description -->
+          <div id="box4">
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/ProdPic1.png" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Body Soap Solid</h16>&nbsp &nbsp
+                <div class="dropdown">
+                  <img src="/static/images/imginfo.png" alt="info" class="dropbtn"></img>
+                  <div class="dropdown-content">
+                    <p>content en masseVegetal oil of Fenugreek,  coconut tensioactif,  water,
+                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,  
+                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
+                        Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder. </p> 
+                  </div>
+                </div>
+                <br>
+                <h11 id="priceSoap"> 2.50€ / piece</h11><br>
+                <h11>
+                  Ingredients:<br>
+                  Vegetal oil of Fenugreek,  coconut tensioactif,  water.
+                </h11>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Product Type of Skin -->
+          <div id="box5">
+            <div class="TOHdiv">
+              <h16>Type of body skin</h16><br>
+            </div>
+            
+            <div class="TOHdiv2"> 
+              <select name="TypeOfBodySkin" id="SelectTypeSoap">
+                {% for TypeBodySkin in DataBodySkin %}
+                  <option> {{ TypeBodySkin.value }} </option>
+                {% endfor %}
+              
+              </select>
+            </div>     
+          </div>
+          
+          <!-- Second Product Flavor choice -->
+          <div id="box6">
+            <div class="TOHdiv">
+              <h16>Flavor</h16><br>
+            </div>
+            
+            <div class="TOHdiv2">
+              <select name="FlavorOfHair" id="SoapSelectFlavor">
+                {% for SoapFlavor in DataSoapFlavor %}
+                  <option> {{ SoapFlavor.value }} </option>
+                {% endfor %}
+              </select>
+            </div> 
+          </div>
+
+          <!-- Second Product Quantity Choice -->
+          <div id="box7">
+            <div class="TOHdiv">
+              <h16>Quantity</h16><br>
+            </div>
+            
+            <div class="TOHdiv2">
+              <select name="Quantity" id="SoapSelectQuantity">
+                <option value="quantity0"> 0 piece </option>
+                <option value="quantity1"> 1 piece </option>
+                <option value="quantity2"> 2 pieces </option>
+                <option value="quantity3"> 3 pieces </option>
+              </select>
+            </div> 
+          </div>
+          
+          <!-- Third Product description-->
+          <div id="box8">
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/CreamPic.png" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Face cream </h16>&nbsp &nbsp
+                <div class="dropdownCream">
+                  <img src="/static/images/imginfo.png" alt="info" class="dropbtnCream"></img>
+                  <div class="dropdownCream-content">
+                    <p>content en masseVegetal oil of Fenugreek,  coconut tensioactif,  water,
+                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,  
+                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
+                        Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder. </p> 
+                  </div>
+                </div>
+                
+                <br>
+                <h11 id="priceCream"> 3.50€ / piece </h11><br>
+                <h11>
+                  Ingredients:<br>
+                  Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
+                </h11>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Third Product Type of Skin -->
+          <div id="box9">
+            <div class="TOHdiv">
+              <h16>Type of face skin</h16><br>
+            </div>
+            
+            <div class="TOHdiv2">
+              <select name="TypeOfFace" id="CreamSelectType">
+                {% for FaceSkin in DataFaceSkin %}
+                  <option> {{ FaceSkin.value }} </option>
+                {% endfor %}
+              </select>
+            </div>  
+          </div>
+          
+          <!-- Third Product Flavor Choice -->
+          <div id="box10">
+            <div class="TOHdiv">
+              <h16>Flavor</h16><br>
+            </div>            
+            <div class="TOHdiv2">
+              <select name="FlavorOfCream" id="CreamSelectFlavor">
+                {% for CreamFlavor in DataCreamFlavor %}
+                  <option> {{ CreamFlavor.value }} </option>
+                {% endfor %}
+              </select>
+            </div> 
+          </div>
+          
+          <!-- Third Product Quantity Choice -->
+          <div id="box11">
+            <div class="TOHdiv">
+              <h16>Quantity</h16><br>
+            </div>
+            
+            <div class="TOHdiv2">
+              <select name="Quantity" id="CreamSelectQuantity">
+                <option value="quantity0"> 0 piece </option>
+                <option value="quantity1"> 1 piece </option>
+                <option value="quantity2"> 2 pieces </option>
+                <option value="quantity3"> 3 pieces </option>
+              </select>
+            </div> 
+          </div>
+          <div id="btom"></div>
+        </div>
+        
+        <!-- Page 2 ////////////// -->
+        <div class="containerOrderP2" id="container1">
+          <div id="navi0">
+            <div class="almsotcenter">
+                <h17>Your order & your information</h17>
+            </div>
+          </div>
+
+          <div id="navi1">
+            <div class="ProducerDiv1">
+              <h16>Order</h16><br>
+              <h12 id="TotalPrice"></h12>
+            </div>
+          </div>
+
+          <div id="navi3">
+            <div>
+              <div class="InformationDiv">
+                <h16>Your information</h16>
+              </div>
+            </div>
+          </div>
+
+          <div id="boxi">
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/ShampooPic.jpg" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Shampoo Solid</h16><br>
+                <h11 id="HairTypeInput"></h11><br>
+                <h11 id="HairFlavorInput"></h11><br>
+                <h11 id="HairQuantityInput"></h11>
+              </div>
+            </div>
+          </div>
+
+          <div id="boxi3">
+            <div class="divmargin">
+              <label for="name"><h16>Your lovely name</h16></label><br>
+              <input type="text" id="nameform" name="name" placeholder="Your name.."><br>
+              <br>
+              <label for="contact"><h16>Your contact</h16></label><br>
+              <input type="text" id="contactform" contact="contact" placeholder="email / whatsapp / slack.."><br>
+            </div>
+          </div>
+            
+          <div id="boxi4">
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/ProdPic1.png" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Body Soap Solid</h16><br>
+                <h11 id="SoapTypeInput"></h11><br>
+                <h11 id="SoapFlavorInput"></h11><br>
+                <h11 id="SoapQuantityInput"></h11><br>
+              </div>
+            </div>
+          </div>
+
+          <div id="boxi7">
+            <div class="divmargin">
+              <br>
+              <h16>Where do you want to pick up the products</h16><br>
+              <select name="location" id="SelectPickUp">
+                <option> CODE Campus </option>
+                <option> Berlin Mitte </option>
+                <option> Berlin Prenzlauer Berg </option>
+              </select>
+            </div>  
+          </div>
+
+          <div id="boxi8">
+            <br>
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/CreamPic.png" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Face Cream</h16><br>
+                <h11 id="CreamTypeInput"></h11><br>
+                <h11 id="CreamFlavorInput"></h11><br>
+                <h11 id="CreamQuantityInput"></h11><br>
+              </div>
+            </div>
+          </div>
+          <div id="boxi11">
+            <div class="divmargin">
+              <label for="message"><h16>Message to the producer</h16></label><br>
+              <input type="text" id="messageform" placeholder="Hey!">
+            </div>
+          </div>
+
+          <div id="btomi"></div>
+        </div>
+        
+        <!-- Page 3 ////////////// -->
+        <div class="containerOrderP2" id="container2">
+          <div id="navi0">
+            <div class="almsotcenter">
+              <h17>Your order & payment option </h17>
+            </div>
+          </div>
+
+          <div id="navi1">
+            <div class="ProducerDiv1">
+              <h16>Order</h16><br>
+              <h12 id="TotalPriceP2"></h12>
+            </div>
+          </div>
+          <div id="navi3">
+            <div>
+              <div class="InformationDiv">
+                <h16>Payment options</h16>
+              </div>
+            </div>
+          </div>
+
+          <div id="boxi">
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/ShampooPic.jpg" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Shampoo Solid</h16><br>
+                <h11 id="HairTypeInputP2"></h11><br>
+                <h11 id="HairFlavorInputP2"></h11><br>
+                <h11 id="HairQuantityInputP2"></h11><br>
+              </div>
+              <br>
+              <br>
+            </div>
+          </div>
+
+          <div id="boxi3">
+            <div class="divmargin">
+              <h11> 
+                As soon the payment is received, the producer will contact you to verify your order and inform you when your products are ready! <br>
+                Later,  you will be able to subscribe to your favourite producer and received your product every month. 
+              </h11>
+              <br>
+              <br>
+              <label for="payment"><h16>Paypal or N26 MoneyBeam</h16></label><br>
+            </div>
+          </div>
+            
+          <div id="boxi4">
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/ProdPic1.png" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Body Soap Solid</h16><br>
+                <h11 id="SoapTypeInputP2"></h11><br>
+                <h11 id="SoapFlavorInputP2"></h11><br>
+                <h11 id="SoapQuantityInputP2"></h11><br>
+              </div>
+              <br>
+              <br>
+            </div>
+          </div>
+
+          <div id="boxi7">
+            <div class="divmargin">
+              <br>
+              <h16>Paypal</h16><br>
+              <h11>adrien.sosson@code.berlin</h11>
+            </div>  
+          </div>
+
+          <div id="boxi8">
+            <div class="ProducerDiv2">
+              <div id="leftDivProd">
+                <img src="/static/images/CreamPic.png" alt="Photo" width="100px"><img/>
+              </div>
+              <div id="rightDivProd">
+                <h16>Face Cream</h16><br>
+                <h11 id="CreamTypeInputP2"></h11><br>
+                <h11 id="CreamFlavorInputP2"></h11><br>
+                <h11 id="CreamQuantityInputP2"></h11><br>
+              </div>
+            </div>
+          </div>
+          <div id="boxi11">
+            <div class="divmargin">
+              <h16>N26 MoneyBeam</h16><br>
+              <h11>+33675578532</h11><br>
+              <h16>label: </h16><h11> greenit order + </h11><h15> your name </h15>
+            </div>
+          </div>
+
+          <div id="btomi"></div>
+        </div>
+
+        <!-- Last Page 4 ////////////// -->
+        <div class="containerOrderP3" id="container3">
+          <div id="in1">
+            <div class="Inlinediv">
+              <div class="thankYouPage">
+                Thank you very much for your trust! 💚
+              </div>
+            </div>
+          </div>
+          <div id="in2">
+            <div class="Inlinediv">
+              <div class="thankYouPage">
+                <h18> Adrien will contact you soon to confirm your order </h18>
+              </div>
+            
+              <br>
+              <div class="incontainer">
+                <img src="{{ url_for('static', filename='images/murser.png') }}" class="imageDescription4">
+              </div> 
+            </div>
+          </div>
+          <div id="in3"></div>
+          <div id="in4">
+            <div class="Inlinediv">
+              <div class="thankYouPage2">
+                Feedback to help Greenit would be very much appreciated <br>
+              </div>
+              <div style="justify-content: center;display: flex;margin-top: 15px;">
+                <iframe class="responsive-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdPQmadR-mZFk5eAZgVf9BRwXJqCV1Q_vP6erXRqIByWDbETQ/viewform?embedded=true"
+                frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </div>
+              <br>
+              <div style="justify-content: center;display: flex;margin-top: 15px;">
+                <h14>Thank you!</h14><br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ButtonsSlider">
+          <div style="display: flex;justify-content: center;">
+            <button class="buttonPrev" id="previous" disabled="true"> Previous</button>
+            <button class="buttonNext" id="next"> Next </button>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+    <div class="section2">
+      Why using Greenit?
+    </div>
+
+    <div class="containerWhy">
+
+      <div id="why1">
+        
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/planet.png') }}" class="imageWhy1">
+        </div>
       </div> 
-
-    </div>
-    
-    <div id="textWhy2">
-      <h7>For your body</h7>
-    </div>
-    
-    
-    <div id="why3">
-  
-      <div class="incontainer">
-        <img src="{{ url_for('static', filename='images/money.png') }}" class="imageWhy3">
+      
+      <div id="textWhy1">
+        <h6>For your planet</h6>
       </div>
-     
-    </div>
+      
+      <div id="why2">
 
-    <div id="textWhy3">
-      <h8>For your money</h8>
-    </div>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/body.png') }}" class="imageWhy2">
+        </div> 
 
-    <div id="why4">
-  
-      <div class="incontainer">
-        <img src="{{ url_for('static', filename='images/wellbeing.png') }}" class="imageWhy4">
       </div>
+      
+      <div id="textWhy2">
+        <h7>For your body</h7>
+      </div>
+      
+      
+      <div id="why3">
     
-    </div>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/money.png') }}" class="imageWhy3">
+        </div>
+      
+      </div>
+
+      <div id="textWhy3">
+        <h8>For your money</h8>
+      </div>
+
+      <div id="why4">
     
-    <div id="textWhy4">
-      <h9>For your wellbeing</h9>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/wellbeing.png') }}" class="imageWhy4">
+        </div>
+      
+      </div>
+      
+      <div id="textWhy4">
+        <h9>For your wellbeing</h9>
+      </div>
+
     </div>
 
-  </div>
-
-  <div class="WrapEndSection3">
-
-    <div class="endSection3">
-      Greenit is a student project for the development of healthy consumption ways
-    </div>
-
-  </div>
-
-  <div class="WrapEndSection3">  
-   
-    <div>
+    <div class="WrapEndSection3">
 
       <div class="endSection3">
-        <button class="button"> <h10>Read more</h10> </button>
+        Greenit is a student project for the development of healthy consumption ways
+      </div>
+
+    </div>
+
+    <div class="WrapEndSection3">  
+    
+      <div>
+
+        <div class="endSection3">
+          <button class="button"> <h10>Read more</h10> </button>
+        </div>
+        
+      </div>
+    
+    </div>
+
+    <div class="section2">
+      FAQ
+    </div>
+
+    
+    <div class="containerFAQ">
+
+      <div id="question1">
+        <h11>What about allergies and danger using those homemade products?</h11>   
+      </div>
+
+      <div id="answer1">
+        <h11> We associate cosmetic/hygiene products with allergies and danger for the reason that the ingredients used
+          in there are toxic. Those toxic ingredients in industrial products are the one we should be worry about. 
+          All products available on this website are made with fully natural ingredients. No Sodium-Sulfat or Hydroxybenzhylaminil here.
+          Furthermore, we have already been tested all products.</h11>   
       </div>
       
-    </div>
-  
-  </div>
+      <div id="question2">
+        <h11>What about allergies and danger using those homemade products?</h11>   
+      </div>
 
-  <div class="section2">
-    FAQ
-  </div>
+      <div id="answer2">
+        <h11>We associate cosmetic/hygiene products with allergies and danger for the reason that the ingredients used
+          in there are toxic. Those toxic ingredients in industrial products are the one we should be worry about. 
+          All products available on this website are made with fully natural ingredients. No Sodium-Sulfat or Hydroxybenzhylaminil here.
+          Furthermore, we have already been tested all products.</h11>   
+      </div>
 
-  
-  <div class="containerFAQ">
+      <div id="question3">
+        <h11>What about allergies and danger using those homemade products?</h11>   
+      </div>
 
-    <div id="question1">
-      <h11>What about allergies and danger using those homemade products?</h11>   
-    </div>
+      <div id="answer3">
+        <h11>We associate cosmetic/hygiene products with allergies and danger for the reason that the ingredients used
+          in there are toxic. Those toxic ingredients in industrial products are the one we should be worry about. 
+          All products available on this website are made with fully natural ingredients. No Sodium-Sulfat or Hydroxybenzhylaminil here.
+          Furthermore, we have already been tested all products.</h11>   
+      </div>
 
-    <div id="answer1">
-      <h11> We associate cosmetic/hygiene products with allergies and danger for the reason that the ingredients used
-        in there are toxic. Those toxic ingredients in industrial products are the one we should be worry about. 
-        All products available on this website are made with fully natural ingredients. No Sodium-Sulfat or Hydroxybenzhylaminil here.
-        Furthermore, we have already been tested all products.</h11>   
-    </div>
+      <div id="question4">
+        <h11>What about allergies and danger using those homemade products? </h11>   
+      </div>
     
-    <div id="question2">
-      <h11>question here</h11>   
+      <div id="answer4">
+        <h11>We associate cosmetic/hygiene products with allergies and danger for the reason that the ingredients used
+          in there are toxic. Those toxic ingredients in industrial products are the one we should be worry about. 
+          All products available on this website are made with fully natural ingredients. No Sodium-Sulfat or Hydroxybenzhylaminil here.
+          Furthermore, we have already been tested all products.</h11>   
+      </div>
+
+      <div id="question5">
+        <h11>question here</h11>   
+      </div>
+
+      <div id="answer5">
+        <h11>answer here</h11>   
+      </div>
+
     </div>
 
-    <div id="answer2">
-      <h11>answer here</h11>   
-    </div>
+    <footer class="footer">
+      <div class="Inlinediv2">
+        <div class="TOHdiv2">
+          <h2> Greenit MVP foundations fall 2020 </h2><br>
+          <h19> contact: adrien.sosson@code.berlin </h19>
+        </div>   
+      </div>
+    </footer>
 
-    <div id="question3">
-      <h11>question here</h11>   
-    </div>
-
-    <div id="answer3">
-      <h11>answer here</h11>   
-    </div>
-
-    <div id="question4">
-      <h11>question here </h11>   
-    </div>
-   
-    <div id="answer4">
-      <h11>answer here</h11>   
-    </div>
-
-    <div id="question5">
-      <h11>question here</h11>   
-    </div>
-
-    <div id="answer5">
-      <h11>answer here</h11>   
-    </div>
-
-  </div>
-
-  <footer class="footer">
-    <h2> Greenit MVP foundations fall 2020 </h2>
-  </footer>
-
-  <footer class="footer2">
-  </footer>
+    <footer class="footer2">
+    </footer>
   
-</body>
+  </body>
+
+</html>
