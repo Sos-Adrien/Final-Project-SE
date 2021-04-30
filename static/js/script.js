@@ -160,7 +160,7 @@ function handleButtons(state){
       try {
         const order = {
           first_name: NameUser,
-          contact: contactform,
+          contact: ContactUser,
           Pickup: LocationPickUp,
           Message: MessageUser,
           OrderShampoo: HairTypeInput, HairFlavorInput, HairQuantityInput,
@@ -178,7 +178,7 @@ function handleButtons(state){
         };
 
         fetch('/ordered', options)
-        .then(res => res.json())
+        .then(res => res.json()).catch(error => console.log(error))
         .then(res => console.log(res));
 
       } catch(error){

@@ -1,6 +1,6 @@
 import sqlite3
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 
@@ -61,20 +61,33 @@ def index():
     CreamDataSkinType = Cream.query.filter_by(type="FaceType").all()
     CreamDataFlavor = Cream.query.filter_by(type="CreamFlavor").all()
 
-    return render_template('base.html', page_title="base", DataHairType=list(ShampooDataHairType), 
-                DataHairFlavor=list(ShampooDataHairFlavor), DataBodySkin=list(SoapDataSkinType),
-                DataSoapFlavor=list(SoapDataFlavor), DataFaceSkin=list(CreamDataSkinType), 
-                DataCreamFlavor=list(CreamDataFlavor))
+    return render_template(
+        'base.html',
+        page_title="base",
+        DataHairType=list(ShampooDataHairType),
+        DataHairFlavor=list(ShampooDataHairFlavor),
+        DataBodySkin=list(SoapDataSkinType),
+        DataSoapFlavor=list(SoapDataFlavor),
+        DataFaceSkin=list(CreamDataSkinType),
+        DataCreamFlavor=list(CreamDataFlavor),
+    )
 
 
 @app.route('/ordered', methods=['POST'])
-
 def order_submit():
     data = request.get_json()
 
-    new_order = Order(name=data[first_name], contact=data[contact])
-    print(data[contact])
-    print(data['contact'])
+    new_order = Order(
+        name=data['first_name'],
+        contact=data['contact'],
+        pickup=data['Pickup'],
+        message=data['Message'],
+        orderShampoo=data['OrderShampoo'],
+        orderSoap=data['OrderSoap'],
+        orderCream=data['OrderCream'],
+        orderPrice=data['Price'],
+    )
 
     db.session.add(new_order)
     db.session.commit()
+    return jsonify({'message': 'new order placed'})
