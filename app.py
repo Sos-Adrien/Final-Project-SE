@@ -66,3 +66,15 @@ def index():
                 DataSoapFlavor=list(SoapDataFlavor), DataFaceSkin=list(CreamDataSkinType), 
                 DataCreamFlavor=list(CreamDataFlavor))
 
+
+@app.route('/ordered', methods=['POST'])
+
+def order_submit():
+    data = request.get_json()
+
+    new_order = Order(name=data[first_name], contact=data[contact])
+    print(data[contact])
+    print(data['contact'])
+
+    db.session.add(new_order)
+    db.session.commit()

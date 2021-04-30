@@ -123,7 +123,7 @@ function handleButtons(state){
 
     // trigger data input in database
     $('.SubmitButton').click(function(){
-      // input for column 'name'
+      
       var NameUser = document.getElementById('nameform').value;
       console.log(NameUser)
       
@@ -156,6 +156,35 @@ function handleButtons(state){
       
       // input for column 'orderPrice'
       console.log(TotalPrice)
+      
+      try {
+        const order = {
+          first_name: NameUser,
+          contact: contactform,
+          Pickup: LocationPickUp,
+          Message: MessageUser,
+          OrderShampoo: HairTypeInput, HairFlavorInput, HairQuantityInput,
+          OrderSoap: SoapTypeInput, SoapFlavorInput, SoapQuantityInput,
+          OrderCream: CreamTypeInput, CreamFlavorInput, CreamQuantityInput,
+          Price: TotalPrice,
+        };
+      
+        const options = {
+          method: 'POST',
+          body: JSON.stringify(order),
+          headers: {
+              'Content-Type': 'application/json'
+          }
+        };
+
+        fetch('/ordered', options)
+        .then(res => res.json())
+        .then(res => console.log(res));
+
+      } catch(error){
+          return Promise.reject(res.status);
+      }
+      
     })
   }
 
