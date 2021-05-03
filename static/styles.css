@@ -191,7 +191,7 @@ h13 {
     font-family: MyWebFont;
     display: inline-block;
     color:#707070; 
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
@@ -228,7 +228,6 @@ h17 {
     color:#707070; 
     font-size: 18px;
     margin-bottom: 30px;
-    margin-top: -20px;
 }
 
 h18 {
@@ -375,6 +374,7 @@ h19 {
 
 .section2{
     margin-top: 10vh;
+    margin-bottom: 5vh;
     font-family: MyWebFont;
     font-size: 20px;
     color: #707070;
@@ -760,7 +760,7 @@ h19 {
 #box8{
     background-color:white;
     grid-area: box8;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 #box9{
@@ -781,7 +781,7 @@ h19 {
 @media only screen and (max-width: 780px) {
     .containerOrder{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.6fr 0.7fr 0.7fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.4fr;
+        grid-template-rows: 0.3fr 0.7fr 0.5fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.4fr;
         grid-template-areas:
             "nav1"
             "nav2"
@@ -817,7 +817,6 @@ h19 {
 .ProducerDiv1{
     width: 100%;
     margin-left: 40px;
-    margin-bottom: -10px;
 }
 
 .ProducerDiv2{
@@ -858,6 +857,7 @@ h19 {
     text-align: left;
     overflow: hidden;
     min-width: 180px;
+    margin-left: 15px;
 }
 
 .TOHdiv {
@@ -884,6 +884,7 @@ h19 {
     margin-top: 4px;
     display: inline;
     width: 12%;
+    min-width: 15px;
     height: 12%;
 }
   
@@ -895,14 +896,17 @@ h19 {
   
 .dropdown-content {
     display: none;
-    background-color: #f1f1f1;
+    background-color: #6e6e6e;
     font-family: MyWebFontLight;
-    font-size: 11px;
-    width: 220px;
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    width: 300px;
     height: auto;
-    padding: 5%;
+    padding: 6%;
     border-radius: 10px;
-    margin-left: -150px;
+    margin-left: -270px;
     box-shadow:
      0px 10px 20px rgba(179, 179, 179, 0.233),
      0px 10px 20px rgba(121, 121, 121, 0.233);
@@ -912,6 +916,7 @@ h19 {
     color: black;
     font-family: MyWebFontLight;
     text-decoration: none;
+    z-index: 1;
     display:flex;
     position:relative;
     overflow-y: overlay;
@@ -940,14 +945,17 @@ h19 {
   
 .dropdownCream-content {
     display: none;
-    background-color: #f1f1f1;
+    background-color: #6e6e6e;
     font-family: MyWebFontLight;
-    font-size: 11px;
-    width: 220px;
+    font-size: 13px;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    width: 300px;
     height: auto;
-    padding: 5%;
+    padding: 6%;
     border-radius: 10px;
-    margin-left: -110px;
+    margin-left: -235px;
     box-shadow:
      0px 10px 20px rgba(179, 179, 179, 0.233),
      0px 10px 20px rgba(121, 121, 121, 0.233);
@@ -957,6 +965,7 @@ h19 {
     color: black;
     font-family: MyWebFontLight;
     text-decoration: none;
+    z-index: 1;
     display:flex;
     position:relative;
     overflow-y: overlay;
@@ -984,16 +993,15 @@ select{
     -webkit-appearance:none; /* Safari and Chrome */
     appearance:none;
 }
-  
-/*all css for the slider section 2 below */
 
 /* Container grid for order page 2 */
 
 .containerOrderP2{
     display: grid;
     height: auto;
-    width: 80%;
-    margin-left: 15%;
+    width: 100%;
+    max-width: 900px;
+    margin-left: 1%;
     margin-top: 1%;
     padding: 1%;
     grid-template-columns: 1fr 1fr;
@@ -1084,10 +1092,10 @@ select{
     grid-area: boxi11;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 550px) {
     .containerOrderP2{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr 0.6fr 1fr 1fr 1fr 0.2fr 1fr 0.8fr 1fr 0.4fr;
+        grid-template-rows: 0.4fr 0.6fr 1fr 1fr 1fr 0.2fr 1fr 0.8fr 1fr 0.4fr;
         grid-template-areas:
             "navi0"
             "navi1" 
@@ -1102,6 +1110,124 @@ select{
     }
 }
 
+/* Container grid for order page 3 */
+
+.containerOrderP3{
+    display: grid;
+    height: auto;
+    width: 100%;
+    max-width: 900px;
+    margin-left: 1%;
+    margin-top: 1%;
+    padding: 1%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.8fr 0.8fr 0.8fr 0.4fr;
+    grid-template-areas:
+        "navx0 navx0"
+        "navx1 navx3"
+        "boxx boxx3"
+        "boxx4 boxx7"
+        "boxx8 boxx11"
+        "btomx btomx";
+    grid-gap: 0rem;
+}
+
+#btomx{
+    background-color:white;
+    grid-area: btomx;
+    align-content: center;
+    display: inline-flex;
+}
+
+#navx0{
+    background-color:white;
+    grid-area: navx0;
+    align-content: center;
+    display: inline-flex;
+}
+
+#navx1{
+    background-color:white;
+    grid-area: navx1;
+    align-items: center;
+    display: inline-flex;
+}
+
+#navx2{
+    background-color: white;
+    grid-area: navx2;
+}
+
+#navx3{
+    background-color: white;
+    grid-area: navx3;
+}
+
+#boxx{
+    background-color: white;
+    grid-area: boxx;
+}
+
+#boxx2{
+    background-color:white;
+    grid-area: boxx2;
+}
+
+#boxx3{
+    background-color:white;
+    grid-area: boxx3;
+}
+
+#boxx4{
+    background-color:white;
+    grid-area: boxx4;
+}
+
+#boxx6{
+    background-color:white;
+    grid-area: boxx6;
+}
+
+#boxx7{
+    background-color:white;
+    grid-area: boxx7;
+}
+
+#boxx8{
+    background-color:white;
+    grid-area: boxx8;
+}
+
+#boxx10{
+    background-color:white;
+    grid-area: boxx10;
+}
+
+#boxx11{
+    background-color:white;
+    grid-area: boxx11;
+}
+
+@media only screen and (max-width: 550px) {
+    .containerOrderP3{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.5fr 0.8fr 0.8fr 0.8fr 0.2fr 1fr 0.6fr 0.6fr 0.2fr;
+        grid-template-areas:
+            "navx0"
+            "navx1" 
+            "boxx"
+            "boxx4"
+            "boxx8"
+            "navx3"          
+            "boxx3" 
+            "boxx7"
+            "boxx11"
+            "btomx";
+    }
+}
+
+/* End container page */
+
 .InformationDiv{
     padding: 20px;
 }
@@ -1114,14 +1240,9 @@ select{
 
 .CenterOrderP2{
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -webkit-box-pack: center;
     justify-content: center;
     -webkit-box-align: stretch;
-    align-items: stretch;
-    width: 80%;
+    width: 100%;
 }
 
 input {
@@ -1256,7 +1377,7 @@ input {
 
 /* Container grid for order page 3 */
 
-.containerOrderP3{
+.containerOrderP4{
     display: grid;
     height: auto;
     width: auto;
@@ -1314,7 +1435,7 @@ input {
 }
 
 @media only screen and (max-width: 550px) {
-    .containerOrderP3{
+    .containerOrderP4{
         grid-template-columns: 1fr;
         grid-template-rows: 0.4fr 0.8fr 0.2fr 8fr 0.2fr;
         grid-template-areas:

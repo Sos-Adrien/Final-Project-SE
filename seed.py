@@ -10,9 +10,9 @@ from app import Cream
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:MDPPG@localhost/flaskapp'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-engine = create_engine('sqlite:///db.sqlite3', echo=True)
+engine = create_engine('postgresql://postgres:MDPPG@localhost/flaskapp', echo=True)
 
 from sqlalchemy.orm import sessionmaker
 
@@ -21,48 +21,42 @@ session = Session()
 
 db = SQLAlchemy(app)
 
-
 if __name__ == "__main__":
     session.add_all(
         [
             Shampoo(type='HairFlavor', value="none"),
-            Shampoo(type='HairFlavor', value="mint"),
-            Shampoo(type='HairFlavor', value="peach"),
-            Shampoo(type='HairFlavor', value="ibiscus"),
+            Shampoo(type='HairFlavor', value="Mango"),
+            Shampoo(type='HairFlavor', value=" Cedar & Hinoky wood"),
 
             Shampoo(type='HairType', value="none"),
-            Shampoo(type='HairType', value="oily"),
-            Shampoo(type='HairType', value="dry"),
-            Shampoo(type='HairType', value="mixte"),
+            Shampoo(type='HairType', value="Oily"),
+            Shampoo(type='HairType', value="Dry"),
+            Shampoo(type='HairType', value="Normal"),
         ]
     )
 
     session.add_all(
         [
             Soap(type='SoapFlavor', value="none"),
-            Soap(type='SoapFlavor', value="peach"),
-            Soap(type='SoapFlavor', value="teatree"),
-            Soap(type='SoapFlavor', value="lavander"),
+            Soap(type='SoapFlavor', value="Coconut"),
+            Soap(type='SoapFlavor', value="Hô Wood"),
 
             Soap(type='SkinType', value="none"),
-            Soap(type='SkinType', value="greasy"),
-            Soap(type='SkinType', value="dry"),
-            Soap(type='SkinType', value="mixte"),
+            Soap(type='SkinType', value="Normal"),
+            Soap(type='SkinType', value="Dry"),
+            Soap(type='SkinType', value="Damaged"),
         ]
     )
 
 
     session.add_all(
         [
-            Cream(type='CreamFlavor', value="none"),
             Cream(type='CreamFlavor', value="neutral"),
-            Cream(type='CreamFlavor', value="teatree"),
-            Cream(type='CreamFlavor', value="mint"),
 
             Cream(type='FaceType', value="none"),
-            Cream(type='FaceType', value="greasy"),
-            Cream(type='FaceType', value="dry"),
-            Cream(type='FaceType', value="mixte"),
+            Cream(type='FaceType', value="Oily"),
+            Cream(type='FaceType', value="Dry"),
+            Cream(type='FaceType', value="Normal"),
         ]
     )
 

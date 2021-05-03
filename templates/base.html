@@ -10,6 +10,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   </head>
 
@@ -100,10 +101,7 @@
           <div id="nav2">
             <div class="EngagementDiv">
               <h12>Engagement:</h12><br>
-              <h11>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-              ex ea commodo consequat. 
+              <h11>  I have been making my soaps, cream and household product for 1 year now. I love exploring new recipes with new ingredients and I would like to offer you the possibility to discover my favourite homemade products. I use the most natural ingredients I can access and I pick ingredients issued from biological agriculture. Always happy to get any feedback and help to improve my products :)  
               </h11> 
             </div>
           </div>
@@ -133,17 +131,23 @@
                 <div class="dropdown">
                   <img src="/static/images/imginfo.png" alt="info" class="dropbtn"></img>
                   <div class="dropdown-content">
-                    <p>content en masseVegetal oil of Fenugreek,  coconut tensioactif,  water,
-                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,  
-                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
-                        Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder. </p> 
+                    <p>
+                      Here are more details about the ingredients: <br>
+                      <br>
+                      Sodium Coco Sulfate: One of the most natural surfactant.
+                      A surfactant is what foams and capture dirty things <br>
+                      For your flavor aromatic choice I use BIO Mango natural extract or BIO Cedar & Hinoky essential oil <br>
+                      For oily hair I use Green Clay which purifies and degreases your hair <br>
+                      For normal hair I use BIO Reetha powder, a plant powder which clean and restores your hair <br>
+                      For dry hair I use Oil coconut & White clay which nourishes and restores your hair <br>
+                    </p> 
                   </div>
                 </div>
                 <br>
                 <h11 id="priceShampoo"> 2.50€ / piece</h11><br>
                 <h11>
                   Ingredients:<br>
-                  Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
+                  Sodium Coconut Sulfate +  Mineral Water + Shea Butter + Flavor aromatic choice + Nature of hair ingredient choice
                 </h11>
               </div>
             </div>
@@ -152,7 +156,7 @@
           <!-- First Product Type of hair -->
           <div id="box1">
             <div class="TOHdiv">
-              <h16>Type of hair</h16><br>
+              <h16>Nature of hair</h16><br>
             </div>
             
             <div class="TOHdiv2">
@@ -191,10 +195,8 @@
                 <option value="quantity0" style="font-family: Arial, Helvetica, sans-serif"> 0 piece </option>
                 <option value="quantity1" style="font-family: Arial, Helvetica, sans-serif"> 1 piece </option>
                 <option value="quantity2" style="font-family: Arial, Helvetica, sans-serif"> 2 pieces </option>
-                <option value="quantity3" style="font-family: Arial, Helvetica, sans-serif"> 3 pieces </option>
               </select>
             </div> 
-
           </div>
 
           <!-- Second Product description -->
@@ -208,17 +210,24 @@
                 <div class="dropdown">
                   <img src="/static/images/imginfo.png" alt="info" class="dropbtn"></img>
                   <div class="dropdown-content">
-                    <p>content en masseVegetal oil of Fenugreek,  coconut tensioactif,  water,
-                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,  
-                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
-                        Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder. </p> 
+                    <p>
+                      Here are more details about the ingredients:<br>
+                      <br>
+                      Soap Base Coconut: vegetal surfactant with glycerin & colza & olive oil. <br>
+                      A surfactant is what foams and capture dirty things. <br>
+                      I use this one because it has no Palm Oil and no alcool (harmfull for the skin)<br>
+                      For your flavor aromatic choice I use BIO Hô wood oil or Coconut natural extract<br>
+                      For damaged skin I use Shea butter which moisturizes and restores your skin<br>
+                      For normal skin I use BIO Sweet Almond Oil which softens your skin<br>
+                      For dry skin I use BIO Oil coconut which deeply nourishes your skin<br>
+                    </p> 
                   </div>
                 </div>
                 <br>
                 <h11 id="priceSoap"> 2.50€ / piece</h11><br>
                 <h11>
                   Ingredients:<br>
-                  Vegetal oil of Fenugreek,  coconut tensioactif,  water.
+                  Soap Base Coconut +  Mineral Water + Flavor aromatic choice + Nature of skin ingredient choice
                 </h11>
               </div>
             </div>
@@ -227,7 +236,7 @@
           <!-- Second Product Type of Skin -->
           <div id="box5">
             <div class="TOHdiv">
-              <h16>Type of body skin</h16><br>
+              <h16>Nature of body skin</h16><br>
             </div>
             
             <div class="TOHdiv2"> 
@@ -266,7 +275,6 @@
                 <option value="quantity0" style="font-family: Arial, Helvetica, sans-serif"> 0 piece </option>
                 <option value="quantity1" style="font-family: Arial, Helvetica, sans-serif"> 1 piece </option>
                 <option value="quantity2" style="font-family: Arial, Helvetica, sans-serif"> 2 pieces </option>
-                <option value="quantity3" style="font-family: Arial, Helvetica, sans-serif"> 3 pieces </option>
               </select>
             </div> 
           </div>
@@ -282,10 +290,17 @@
                 <div class="dropdownCream">
                   <img src="/static/images/imginfo.png" alt="info" class="dropbtnCream"></img>
                   <div class="dropdownCream-content">
-                    <p>content en masseVegetal oil of Fenugreek,  coconut tensioactif,  water,
-                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,  
-                        plant powder.Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
-                        Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder. </p> 
+                    <p>
+                      Here are more details about the ingredients:<br>
+                      <br>
+                      Vegetal Emulsifying wax: made from olive & coconut extract and potassium mineral<br>
+                      A Vegetal Emulsifying wax is what gives the textures to the cream. <br>
+                      I use this one because it comes from vegetal and mineral extracts and has no Palm Oil<br>
+                      Grapefruit seed extract is the most natural conservative you can find.<br>
+                      For oily skin I use a BIO Jojoba Vegetal Oil which regulates the secretions of sebum without damaging your skin<br>
+                      For normal skin I use BIO Sweet Almond Oil which softens your skin.<br>
+                      For dry skin I use BIO Avocado Vegetal Oil which nourishes and protects your skin <br>
+                    </p> 
                   </div>
                 </div>
                 
@@ -293,7 +308,7 @@
                 <h11 id="priceCream"> 3.50€ / piece </h11><br>
                 <h11>
                   Ingredients:<br>
-                  Vegetal oil of Fenugreek,  coconut tensioactif,  water,   plant powder.
+                  Vegetal Emulsifying wax + Mineral Water + Grapefruit seed extract + Nature of skin ingredient choice
                 </h11>
               </div>
             </div>
@@ -302,7 +317,7 @@
           <!-- Third Product Type of Skin -->
           <div id="box9">
             <div class="TOHdiv">
-              <h16>Type of face skin</h16><br>
+              <h16>Nature of face skin</h16><br>
             </div>
             
             <div class="TOHdiv2">
@@ -339,210 +354,216 @@
                 <option value="quantity0" style="font-family: Arial, Helvetica, sans-serif"> 0 piece </option>
                 <option value="quantity1" style="font-family: Arial, Helvetica, sans-serif"> 1 piece </option>
                 <option value="quantity2" style="font-family: Arial, Helvetica, sans-serif"> 2 pieces </option>
-                <option value="quantity3" style="font-family: Arial, Helvetica, sans-serif"> 3 pieces </option>
               </select>
             </div> 
           </div>
           <div id="btom"></div>
         </div>
         
-        <!-- Page 2 ////////////// -->
-        <div class="containerOrderP2" id="container1">
-          <div id="navi0">
-            <div class="almsotcenter">
-                <h17>Your order & your information</h17>
-            </div>
-          </div>
-
-          <div id="navi1">
-            <div class="ProducerDiv1">
-              <h16>Order</h16><br>
-              <h12 id="TotalPrice"></h12>
-            </div>
-          </div>
-
-          <div id="navi3">
-            <div>
-              <div class="InformationDiv">
-                <h16>Your information</h16>
+        <!-- Page 2 slider////////////// -->
+        <div class="CenterOrderP2">
+          <div class="containerOrderP2" id="container1">
+            <div id="navi0">
+              <div class="almsotcenter">
+                  <h17>Your order & your information</h17>
               </div>
             </div>
-          </div>
 
-          <div id="boxi">
-            <div class="ProducerDiv2">
-              <div id="leftDivProd">
-                <img src="/static/images/ShampooPic.jpg" alt="Photo" width="100px"><img/>
-              </div>
-              <div id="rightDivProd">
-                <h16>Shampoo Solid</h16><br>
-                <h11 id="HairTypeInput"></h11><br>
-                <h11 id="HairFlavorInput"></h11><br>
-                <h11 id="HairQuantityInput"></h11>
+            <div id="navi1">
+              <div class="ProducerDiv1">
+                <h16>Order</h16><br>
+                <h12 id="TotalPrice"></h12>
               </div>
             </div>
-          </div>
 
-          <div id="boxi3">
-            <div class="divmargin">
-              <label for="name"><h16>Your lovely name</h16></label><br>
-              <input type="text" id="nameform" name="name" placeholder="Your name.."><br>
+            <div id="navi3">
+              <div>
+                <div class="InformationDiv">
+                  <h16>Your information</h16>
+                </div>
+              </div>
+            </div>
+
+            <div id="boxi">
+              <div class="ProducerDiv2">
+                <div id="leftDivProd">
+                  <img src="/static/images/ShampooPic.jpg" alt="Photo" width="100px"><img/>
+                </div>
+                <div id="rightDivProd">
+                  <h16>Shampoo Solid</h16><br>
+                  <h11 id="HairTypeInput"></h11><br>
+                  <h11 id="HairFlavorInput"></h11><br>
+                  <h11 id="HairQuantityInput"></h11>
+                </div>
+              </div>
+            </div>
+
+            <div id="boxi3">
+              <div class="divmargin">
+                <label for="name"><h16>Your lovely name</h16></label><br>
+                <input type="text" id="nameform" name="name" placeholder="Your name.."><br>
+                <br>
+                <label for="contact"><h16>Your contact</h16></label><br>
+                <input type="text" id="contactform" contact="contact" placeholder="email / whatsapp / slack.."><br>
+              </div>
+            </div>
+              
+            <div id="boxi4">
+              <div class="ProducerDiv2">
+                <div id="leftDivProd">
+                  <img src="/static/images/ProdPic1.png" alt="Photo" width="100px"><img/>
+                </div>
+                <div id="rightDivProd">
+                  <h16>Body Soap Solid</h16><br>
+                  <h11 id="SoapTypeInput"></h11><br>
+                  <h11 id="SoapFlavorInput"></h11><br>
+                  <h11 id="SoapQuantityInput"></h11><br>
+                </div>
+              </div>
+            </div>
+
+            <div id="boxi7">
+              <div class="divmargin">
+                <br>
+                <h16>Where do you want to pick up the products</h16><br>
+                <select name="location" id="SelectPickUp">
+                  <option> CODE Campus </option>
+                  <option> Berlin Mitte </option>
+                  <option> Berlin Prenzlauer Berg </option>
+                </select>
+              </div>  
+            </div>
+
+            <div id="boxi8">
               <br>
-              <label for="contact"><h16>Your contact</h16></label><br>
-              <input type="text" id="contactform" contact="contact" placeholder="email / whatsapp / slack.."><br>
-            </div>
-          </div>
-            
-          <div id="boxi4">
-            <div class="ProducerDiv2">
-              <div id="leftDivProd">
-                <img src="/static/images/ProdPic1.png" alt="Photo" width="100px"><img/>
-              </div>
-              <div id="rightDivProd">
-                <h16>Body Soap Solid</h16><br>
-                <h11 id="SoapTypeInput"></h11><br>
-                <h11 id="SoapFlavorInput"></h11><br>
-                <h11 id="SoapQuantityInput"></h11><br>
+              <div class="ProducerDiv2">
+                <div id="leftDivProd">
+                  <img src="/static/images/CreamPic.png" alt="Photo" width="100px"><img/>
+                </div>
+                <div id="rightDivProd">
+                  <h16>Face Cream</h16><br>
+                  <h11 id="CreamTypeInput"></h11><br>
+                  <h11 id="CreamFlavorInput"></h11><br>
+                  <h11 id="CreamQuantityInput"></h11><br>
+                </div>
               </div>
             </div>
-          </div>
+            <div id="boxi11">
+              <div class="divmargin">
+                <label for="message"><h16>Message to the producer</h16></label><br>
+                <input type="text" id="messageform" placeholder="Hey!">
+              </div>
+            </div>
 
-          <div id="boxi7">
-            <div class="divmargin">
-              <br>
-              <h16>Where do you want to pick up the products</h16><br>
-              <select name="location" id="SelectPickUp">
-                <option> CODE Campus </option>
-                <option> Berlin Mitte </option>
-                <option> Berlin Prenzlauer Berg </option>
-              </select>
-            </div>  
+            <div id="btomi"></div>
           </div>
-
-          <div id="boxi8">
-            <br>
-            <div class="ProducerDiv2">
-              <div id="leftDivProd">
-                <img src="/static/images/CreamPic.png" alt="Photo" width="100px"><img/>
-              </div>
-              <div id="rightDivProd">
-                <h16>Face Cream</h16><br>
-                <h11 id="CreamTypeInput"></h11><br>
-                <h11 id="CreamFlavorInput"></h11><br>
-                <h11 id="CreamQuantityInput"></h11><br>
-              </div>
-            </div>
-          </div>
-          <div id="boxi11">
-            <div class="divmargin">
-              <label for="message"><h16>Message to the producer</h16></label><br>
-              <input type="text" id="messageform" placeholder="Hey!">
-            </div>
-          </div>
-
-          <div id="btomi"></div>
         </div>
         
-        <!-- Page 3 ////////////// -->
-        <div class="containerOrderP2" id="container2">
-          <div id="navi0">
-            <div class="almsotcenter">
-              <h17>Your order & payment option </h17>
+        
+        <!-- Page 3 slider////////////// -->
+        <div class="CenterOrderP2">
+          <div class="containerOrderP3" id="container2">
+            <div id="navx0">
+              <div class="almsotcenter">
+                <h17>Your order & payment option </h17>
+              </div>
             </div>
-          </div>
 
-          <div id="navi1">
-            <div class="ProducerDiv1">
-              <h16>Order</h16><br>
-              <h12 id="TotalPriceP2"></h12>
-            </div>
-          </div>
-          <div id="navi3">
-            <div>
-              <div class="InformationDiv">
-                <h16>Payment options</h16>
+            <div id="navx1">
+              <div class="ProducerDiv1">
+                <h16>Order</h16><br>
+                <h12 id="TotalPriceP2"></h12>
               </div>
             </div>
-          </div>
+            <div id="navx3">
+              <div>
+                <div class="InformationDiv">
+                  <h16>Payment options</h16>
+                </div>
+              </div>
+            </div>
 
-          <div id="boxi">
-            <div class="ProducerDiv2">
-              <div id="leftDivProd">
-                <img src="/static/images/ShampooPic.jpg" alt="Photo" width="100px"><img/>
+            <div id="boxx">
+              <div class="ProducerDiv2">
+                <div id="leftDivProd">
+                  <img src="/static/images/ShampooPic.jpg" alt="Photo" width="100px"><img/>
+                </div>
+                <div id="rightDivProd">
+                  <h16>Shampoo Solid</h16><br>
+                  <h11 id="HairTypeInputP2"></h11><br>
+                  <h11 id="HairFlavorInputP2"></h11><br>
+                  <h11 id="HairQuantityInputP2"></h11><br>
+                </div>
+                <br>
+                <br>
               </div>
-              <div id="rightDivProd">
-                <h16>Shampoo Solid</h16><br>
-                <h11 id="HairTypeInputP2"></h11><br>
-                <h11 id="HairFlavorInputP2"></h11><br>
-                <h11 id="HairQuantityInputP2"></h11><br>
-              </div>
-              <br>
-              <br>
             </div>
-          </div>
 
-          <div id="boxi3">
-            <div class="divmargin">
-              <h11> 
-                As soon the payment is received, the producer will contact you to verify your order and inform you when your products are ready! <br>
-                Later,  you will be able to subscribe to your favourite producer and received your product every month. 
-              </h11>
-              <br>
-              <br>
-              <label for="payment"><h16>Paypal or N26 MoneyBeam</h16></label><br>
-            </div>
-          </div>
-            
-          <div id="boxi4">
-            <div class="ProducerDiv2">
-              <div id="leftDivProd">
-                <img src="/static/images/ProdPic1.png" alt="Photo" width="100px"><img/>
+            <div id="boxx3">
+              <div class="divmargin">
+                <h11> 
+                  As soon the payment is received, the producer will contact you to verify your order and inform you when your products are ready! <br>
+                  Later,  you will be able to subscribe to your favourite producer and received your product every month. 
+                </h11>
+                <br>
+                <br>
+                <br>       
               </div>
-              <div id="rightDivProd">
-                <h16>Body Soap Solid</h16><br>
-                <h11 id="SoapTypeInputP2"></h11><br>
-                <h11 id="SoapFlavorInputP2"></h11><br>
-                <h11 id="SoapQuantityInputP2"></h11><br>
-              </div>
-              <br>
-              <br>
             </div>
-          </div>
+              
+            <div id="boxx4">
+              <div class="ProducerDiv2">
+                <div id="leftDivProd">
+                  <img src="/static/images/ProdPic1.png" alt="Photo" width="100px"><img/>
+                </div>
+                <div id="rightDivProd">
+                  <h16>Body Soap Solid</h16><br>
+                  <h11 id="SoapTypeInputP2"></h11><br>
+                  <h11 id="SoapFlavorInputP2"></h11><br>
+                  <h11 id="SoapQuantityInputP2"></h11><br>
+                </div>
+                <br>
+                <br>
+              </div>
+            </div>
 
-          <div id="boxi7">
-            <div class="divmargin">
-              <br>
-              <h16>Paypal</h16><br>
-              <h11>adrien.sosson@code.berlin</h11>
-            </div>  
-          </div>
+            <div id="boxx7">
+              <div class="divmargin">
+                <label for="payment"><h16>Paypal or N26 MoneyBeam</h16></label><br>
+                <br>
+                <h16>Paypal</h16><br>
+                <h11>adrien.sosson@code.berlin</h11>
+              </div>  
+            </div>
 
-          <div id="boxi8">
-            <div class="ProducerDiv2">
-              <div id="leftDivProd">
-                <img src="/static/images/CreamPic.png" alt="Photo" width="100px"><img/>
-              </div>
-              <div id="rightDivProd">
-                <h16>Face Cream</h16><br>
-                <h11 id="CreamTypeInputP2"></h11><br>
-                <h11 id="CreamFlavorInputP2"></h11><br>
-                <h11 id="CreamQuantityInputP2"></h11><br>
+            <div id="boxx8">
+              <div class="ProducerDiv2">
+                <div id="leftDivProd">
+                  <img src="/static/images/CreamPic.png" alt="Photo" width="100px"><img/>
+                </div>
+                <div id="rightDivProd">
+                  <h16>Face Cream</h16><br>
+                  <h11 id="CreamTypeInputP2"></h11><br>
+                  <h11 id="CreamFlavorInputP2"></h11><br>
+                  <h11 id="CreamQuantityInputP2"></h11><br>
+                </div>
               </div>
             </div>
-          </div>
-          <div id="boxi11">
-            <div class="divmargin">
-              <h16>N26 MoneyBeam</h16><br>
-              <h11>+33675578532</h11><br>
-              <h16>label: </h16><h11> greenit order + </h11><h15> your name </h15>
+            <div id="boxx11">
+              <div class="divmargin">
+                <h16>N26 MoneyBeam</h16><br>
+                <h11>+33675578532</h11><br>
+                <h16>label: </h16><h11> greenit order + </h11><h15> your name </h15>
+              </div>
             </div>
-          </div>
 
-          <div id="btomi"></div>
+            <div id="btomx"></div>
+          </div>
         </div>
+        
 
         <!-- Last Page 4 ////////////// -->
-        <div class="containerOrderP3" id="container3">
+        <div class="containerOrderP4" id="container3">
           <div id="in1">
             <div class="Inlinediv">
               <div class="thankYouPage">

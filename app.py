@@ -4,12 +4,11 @@ from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 
-
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:MDPPG@localhost/flaskapp'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-engine = create_engine('sqlite:///db.sqlite3', echo=True)
+engine = create_engine('postgresql://postgres:MDPPG@localhost/flaskapp', echo=True)
 
 from sqlalchemy.orm import sessionmaker
 

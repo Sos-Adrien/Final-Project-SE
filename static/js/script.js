@@ -1,8 +1,9 @@
 
-  
-  //document.getElementsByClassName("IngredientsDiv").className = "dropdown-content"
-
-
+// When the user clicks on div, open the popup
+function myFunctionPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
 
 // Slider
 let slides = ['container0', 'container1', 'container2', 'container3']
@@ -120,81 +121,102 @@ function handleButtons(state){
 
     document.getElementById("next").className = "SubmitButton"
     document.getElementById("next").innerHTML = "Submit"
-
-    // trigger data input in database
-    $('.SubmitButton').click(function(){
-      
-      var NameUser = document.getElementById('nameform').value;
-      console.log(NameUser)
-      
-      // input for column 'contact'
-      var ContactUser = document.getElementById('contactform').value;
-      console.log(ContactUser)
-      
-      // input for column 'pickup'
-      var LocationPickUp = $('#SelectPickUp').find(":selected").text()
-      console.log(LocationPickUp)
-      
-      // input for column 'message'
-      var MessageUser = document.getElementById('messageform').value;
-      console.log(MessageUser)
-      
-      // input for column 'orderShampoo'
-      console.log(HairTypeInput)
-      console.log(HairFlavorInput)
-      console.log(HairQuantityInput)
-      
-      // input for column 'orderSoap'
-      console.log(SoapTypeInput)
-      console.log(SoapFlavorInput)
-      console.log(SoapQuantityInput)
-      
-      // input for column 'orderCream'
-      console.log(CreamTypeInput)
-      console.log(CreamFlavorInput)
-      console.log(CreamQuantityInput)
-      
-      // input for column 'orderPrice'
-      console.log(TotalPrice)
-      
-      try {
-        const order = {
-          first_name: NameUser,
-          contact: ContactUser,
-          Pickup: LocationPickUp,
-          Message: MessageUser,
-          OrderShampoo: HairTypeInput, HairFlavorInput, HairQuantityInput,
-          OrderSoap: SoapTypeInput, SoapFlavorInput, SoapQuantityInput,
-          OrderCream: CreamTypeInput, CreamFlavorInput, CreamQuantityInput,
-          Price: TotalPrice,
-        };
-      
-        const options = {
-          method: 'POST',
-          body: JSON.stringify(order),
-          headers: {
-              'Content-Type': 'application/json'
-          }
-        };
-
-        fetch('/ordered', options)
-        .then(res => res.json()).catch(error => console.log(error))
-        .then(res => console.log(res));
-
-      } catch(error){
-          return Promise.reject(res.status);
-      }
-      
-    })
   }
 
   if (state === 3){
     $('#next').prop('disabled', true).hide()
     $('#previous').prop('disabled', true).hide()
 
+    // trigger data input in database
+      
+    var NameUser = document.getElementById('nameform').value;
+    // user input for column 'contact'
+    var ContactUser = document.getElementById('contactform').value;
+    // user input for column 'pickup'
+    var LocationPickUp = $('#SelectPickUp').find(":selected").text()
+    // user input for column 'message'
+    var MessageUser = document.getElementById('messageform').value;
+    // user input for Shampoo
+    var HairTypeInput = $('#SelectTypeOfHair').find(":selected").text()
+    var HairFlavorInput = $('#HairSelectFlavor').find(":selected").text()
+    var HairQuantityInput = $('#HairSelectQuantity').find(":selected").text()
+    // user input for Soap
+    var SoapTypeInput = $('#SelectTypeSoap').find(":selected").text()
+    var SoapFlavorInput = $('#SoapSelectFlavor').find(":selected").text()
+    var SoapQuantityInput = $('#SoapSelectQuantity').find(":selected").text()
+    // user input for Cream Body
+    var CreamTypeInput = $('#CreamSelectType').find(":selected").text()
+    var CreamFlavorInput = $('#CreamSelectFlavor').find(":selected").text()
+    var CreamQuantityInput = $('#CreamSelectQuantity').find(":selected").text()
+    // var price
+    var PS = document.getElementById("priceShampoo").innerHTML
+    var priceShampoo = parseFloat(PS)
+    var QShampoo = parseFloat(HairQuantityInput)
+
+    var PSo = document.getElementById("priceSoap").innerHTML
+    var priceSoap = parseFloat(PSo)
+    var QSoap = parseFloat(SoapQuantityInput)
+
+    var PC = document.getElementById("priceCream").innerHTML
+    var priceCream = parseFloat(PC)
+    var QCream = parseFloat(CreamQuantityInput)
+
+    var TotalPrice = (priceShampoo * QShampoo) + (priceSoap * QSoap) + (priceCream * QCream)
+    
+    try {
+      const order = {
+        first_name: NameUser,
+        contact: ContactUser,
+        Pickup: LocationPickUp,
+        Message: MessageUser,
+        OrderShampoo: HairTypeInput + HairFlavorInput + HairQuantityInput,
+        OrderSoap: SoapTypeInput + SoapFlavorInput + SoapQuantityInput,
+        OrderCream: CreamTypeInput + CreamFlavorInput + CreamQuantityInput,
+        Price: TotalPrice,
+      };
+      
+      const options = {
+        method: 'POST',
+        body: JSON.stringify(order),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+      };
+
+      fetch('/ordered', options)
+      .then(res => res.json()).catch(error => console.log(error))
+      .then(res => console.log(res));
+
+    } catch(error){
+        return Promise.reject(res.status);
+    } 
+
+    //send email
+    function sendEmail() {
+      Email.send({
+      Host: "smtp.gmail.com",
+      Username : "adrn.soss@gmail.com",
+      Password : "Wworde112307",
+      To : 'adrien.sosson@code.berlin',
+      From : "adrn.soss@gmail.com",
+      Subject : "New Greenit Order!",
+      Body : NameUser + " has ordered: " + "<br>" +
+      HairQuantityInput + " of Shampoo " + HairFlavorInput + HairTypeInput + "<br>" +
+      SoapQuantityInput + " of Soap " + SoapTypeInput + SoapFlavorInput + "<br>" +
+      CreamQuantityInput + " of Cream " + CreamTypeInput + CreamFlavorInput + "<br>" +
+      " for the total price of " + TotalPrice + " € " +"<br>"+
+      " his/her contact is: " + ContactUser + " he/she wants to get the product in " + LocationPickUp + "<br>" +
+      "his/her message to you is: " + MessageUser,
+      }).then(
+        console.log("mail sent successfully")
+      );
+    }
+
+    sendEmail()
+
   } else {
     $('#next').prop('disabled', false)
-    $('#previous').prop('disabled', false) 
+    $('#previous').prop('disabled', false)
   }
 }
 
