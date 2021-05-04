@@ -60,22 +60,22 @@ body {
 
 @font-face {
     font-family: MyWebFont;
-    src: local('Ubuntu-Medium'), url('/font/Ubuntu/Ubuntu-Medium.ttf') format('truetype'); 
+    src: local('Ubuntu-Medium'), url('/static/font/Ubuntu/Ubuntu-Medium.ttf') format('truetype'); 
 }
 
 @font-face {
     font-family: MyWebFontRegular;
-    src: local('Ubuntu-Regular'), url('/font/Ubuntu/Ubuntu-Regular.ttf') format('truetype'); 
+    src: local('Ubuntu-Regular'), url('/static/font/Ubuntu/Ubuntu-Regular.ttf') format('truetype'); 
 }
 
 @font-face {
     font-family: MyWebFontLight;
-    src: local('Ubuntu-Light'), url('/font/Ubuntu/Ubuntu-Light.ttf') format('truetype'); 
+    src: local('Ubuntu-Light'), url('/static/font/Ubuntu/Ubuntu-Light.ttf') format('truetype'); 
 }
 
 @font-face {
     font-family: MyWebFontLightItalic;
-    src: local('Ubuntu-LightItalic'), url('/font/Ubuntu/Ubuntu-LightItalic.ttf') format('truetype'); 
+    src: local('Ubuntu-LightItalic'), url('/static/font/Ubuntu/Ubuntu-LightItalic.ttf') format('truetype'); 
 }
 
 /*below are all " h text " for the all page */

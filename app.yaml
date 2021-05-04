@@ -4,7 +4,7 @@ instance_class: F2
 
 handlers:
 - url: /static
-  static_dir: static
+  static_dir: greenit_website/static
 
 - url: /.*
   secure: always

@@ -1,4 +1,4 @@
-from final_project_SE.app import app
+from greenit_website.app import app
 
 
 def test_index():
