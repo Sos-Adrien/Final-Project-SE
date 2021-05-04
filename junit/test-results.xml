@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.455" timestamp="2021-05-04T13:49:07.704825" hostname="MacBook-Pro-de-Adrien.fritz.box"><testcase classname="tests.test_project" name="test_index" time="0.143" /></testsuite></testsuites>

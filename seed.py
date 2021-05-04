@@ -4,9 +4,7 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 
-from app import Shampoo
-from app import Soap
-from app import Cream
+from final_project_SE.app import Shampoo, Soap, Cream
 
 app = Flask(__name__)
 
