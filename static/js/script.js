@@ -16,9 +16,9 @@ function hideAllSlides() {
 
 function handleButtons(state){
   if (state === 0){
-    $('#previous').prop('disabled', true)
+    $('#previous').prop('disabled', true).hide()
   } else {
-    $('#previous').prop('disabled', false) 
+    $('#previous').prop('disabled', false)
   }
 
   if (state === 1){

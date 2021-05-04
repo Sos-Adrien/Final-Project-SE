@@ -195,6 +195,14 @@ h13 {
     margin-bottom: 30px;
 }
 
+/*h131 is "products" */
+h131 {
+    font-family: MyWebFont;
+    display: inline-block;
+    color:#707070; 
+    font-size: 20px;
+}
+
 /*h14 is "Adrien" */
 h14 {
     font-family: MyWebFont;
@@ -676,14 +684,21 @@ h19 {
     width: 100%;
     margin-top: 1%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 0.4fr;
+    grid-template-rows: 1fr 0.1fr 1fr 1fr 1fr 0.4fr;
     grid-template-areas: 
         "nav1 nav2 nav2 nav2 nav3"
+        "line line line line line"
         "box box box1 box2 box3"
         "box4 box4 box5 box6 box7"
         "box8 box8 box9 box10 box11"
         "btom btom btom btom btom";
     grid-gap: 0.2rem;
+}
+
+#line{
+    background-color:white;
+    align-items: center;
+    display: flex;
 }
 
 #btom{
@@ -739,7 +754,7 @@ h19 {
 #box4{
     background-color:white;
     grid-area: box4;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 #box5{
@@ -781,11 +796,12 @@ h19 {
 @media only screen and (max-width: 780px) {
     .containerOrder{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 0.7fr 0.5fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.4fr;
+        grid-template-rows: 0.3fr 0.7fr 0.5fr 0.2fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.6fr 0.1fr 0.1fr 0.1fr 0.4fr;
         grid-template-areas:
             "nav1"
             "nav2"
             "nav3"
+            "line"
             "box"
             "box1"
             "box2"
@@ -853,7 +869,7 @@ h19 {
 }
   
 #rightDivProd {
-    width: 40%;
+    width: 60%;
     text-align: left;
     overflow: hidden;
     min-width: 180px;
@@ -906,7 +922,7 @@ h19 {
     height: auto;
     padding: 6%;
     border-radius: 10px;
-    margin-left: -270px;
+    margin-left: -150px;
     box-shadow:
      0px 10px 20px rgba(179, 179, 179, 0.233),
      0px 10px 20px rgba(121, 121, 121, 0.233);
@@ -955,7 +971,7 @@ h19 {
     height: auto;
     padding: 6%;
     border-radius: 10px;
-    margin-left: -235px;
+    margin-left: -110px;
     box-shadow:
      0px 10px 20px rgba(179, 179, 179, 0.233),
      0px 10px 20px rgba(121, 121, 121, 0.233);
