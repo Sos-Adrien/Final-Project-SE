@@ -1,5 +1,4 @@
-from greenit_website.app import app
-
+from app import app
 
 def test_index():
     # create a version of our website that we can use for testing
