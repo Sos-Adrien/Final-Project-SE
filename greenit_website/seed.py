@@ -10,7 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:websitedb@34.89.2
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 engine = create_engine('postgresql://postgres:websitedb@34.89.203.218:5432/postgres')
 
-from app import Shampoo, Soap, Cream
+from greenit_website.app import Shampoo, Soap, Cream
 from sqlalchemy.orm import sessionmaker
 
 Session = sessionmaker(bind=engine)
