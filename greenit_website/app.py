@@ -1,5 +1,4 @@
 import sqlite3
-import pymysql
 
 from flask import Flask, render_template, request, jsonify, make_response
 from flask_sqlalchemy import SQLAlchemy
