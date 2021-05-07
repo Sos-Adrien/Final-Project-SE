@@ -579,9 +579,9 @@ h19 {
 }
 
 #question1{
-    background-color: white;
+    background-color:white;
     grid-area:question1;
-    text-align:center;
+    text-align:right;
     font-family: MyWebFont;
 
 }
@@ -589,7 +589,7 @@ h19 {
 #question2{
     background-color:white;
     grid-area:question2;
-    text-align: center;
+    text-align: right;
     font-family: MyWebFont;
 
 }
@@ -597,7 +597,7 @@ h19 {
 #question3{
     background-color:white;
     grid-area:question3;
-    text-align: center;
+    text-align: right;
     font-family: MyWebFont;
 
 }
@@ -605,7 +605,7 @@ h19 {
 #question4{
     background-color:white;
     grid-area:question4;
-    text-align: center;
+    text-align: right;
     font-family: MyWebFont;
 
 }
@@ -613,7 +613,7 @@ h19 {
 #question5{
     background-color:white;
     grid-area:question5;
-    text-align: center;
+    text-align: right;
     font-family: MyWebFont;
 
 }
@@ -891,7 +891,7 @@ h19 {
     margin-top: 5px;
     text-align: center;
     align-items: center;
-    display: block;
+    display: block ruby;
 }
 
 /* hover text information for product 1 & 2  **/
@@ -997,6 +997,8 @@ h19 {
 /* Dropdown button for user choice **/
 select{
     text-align: center;
+    display: flex;
+    align-items: center;
     font-size: 16px;
     font-family: MyWebFontRegular;
     color:#707070;

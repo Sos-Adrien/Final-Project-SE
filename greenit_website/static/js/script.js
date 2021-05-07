@@ -14,11 +14,13 @@ function hideAllSlides() {
   })
 }
 
+
+
 function handleButtons(state){
   if (state === 0){
     $('#previous').prop('disabled', true).hide()
   } else {
-    $('#previous').prop('disabled', false)
+    $('#previous').prop('disabled', false).show()
   }
 
   if (state === 1){
@@ -189,30 +191,7 @@ function handleButtons(state){
 
     } catch(error){
         return Promise.reject(res.status);
-    } 
-
-    //send email
-    function sendEmail() {
-      Email.send({
-      Host: "smtp.gmail.com",
-      Username : "adrn.soss@gmail.com",
-      Password : "Wworde112307",
-      To : 'adrien.sosson@code.berlin',
-      From : "adrn.soss@gmail.com",
-      Subject : "New Greenit Order!",
-      Body : NameUser + " has ordered: " + "<br>" +
-      HairQuantityInput + " of Shampoo " + HairFlavorInput + HairTypeInput + "<br>" +
-      SoapQuantityInput + " of Soap " + SoapTypeInput + SoapFlavorInput + "<br>" +
-      CreamQuantityInput + " of Cream " + CreamTypeInput + CreamFlavorInput + "<br>" +
-      " for the total price of " + TotalPrice + " € " +"<br>"+
-      " his/her contact is: " + ContactUser + " he/she wants to get the product in " + LocationPickUp + "<br>" +
-      "his/her message to you is: " + MessageUser,
-      }).then(
-        console.log("mail sent successfully")
-      );
     }
-
-    sendEmail()
 
   } else {
     $('#next').prop('disabled', false)
@@ -223,8 +202,9 @@ function handleButtons(state){
 $(document).ready(function(){
   hideAllSlides()
   let state = 0
-  $('#' + slides[state]).show() 
-  
+  $('#' + slides[state]).show()
+  $('#previous').prop('disabled', true).hide()
+
   $('#next').click(function(){
     hideAllSlides()
     state += 1
