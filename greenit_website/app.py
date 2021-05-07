@@ -6,9 +6,9 @@ from sqlalchemy import create_engine
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:websitedb@34.89.203.218:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:websitedb@35.242.251.167:5432/postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-engine = create_engine('postgresql://postgres:websitedb@34.89.203.218:5432/postgres')
+engine = create_engine('postgresql://postgres:websitedb@35.242.251.167:5432/postgres')
 
 from sqlalchemy.orm import sessionmaker
 
