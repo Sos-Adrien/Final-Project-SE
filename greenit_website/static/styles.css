@@ -69,6 +69,11 @@ body {
 }
 
 @font-face {
+    font-family: MyWebFontItalic;
+    src: local('Ubuntu-Italic'), url('/static/font/Ubuntu/Ubuntu-Italic.tff') format('truetype'); 
+}
+
+@font-face {
     font-family: MyWebFontLight;
     src: local('Ubuntu-Light'), url('/static/font/Ubuntu/Ubuntu-Light.ttf') format('truetype'); 
 }
@@ -171,10 +176,18 @@ h10 {
     font-size: auto;
 }
 
+/*h11 is for FAQ answers */
 h11 {
     font-size: 14px;
     color: #707070;
     font-family: MyWebFontRegular;
+}
+
+/*h111 is for FAQ questions */
+h111 {
+    font-size: 14px;
+    color:#7fb9e9;
+    font-family: MyWebFontItalic;
 }
 
 /*h12 is "Berlin" */

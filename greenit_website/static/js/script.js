@@ -14,8 +14,6 @@ function hideAllSlides() {
   })
 }
 
-
-
 function handleButtons(state){
   if (state === 0){
     // smoothly scroll to the top of the container
@@ -23,7 +21,7 @@ function handleButtons(state){
     element.scrollIntoView({
       behavior: 'smooth'
     });
-    
+
     $('#previous').prop('disabled', true).hide()
   } else {
     $('#previous').prop('disabled', false).show()
@@ -37,34 +35,55 @@ function handleButtons(state){
     });
 
     // display user choice for Shampoo
-    var HairTypeInput = $('#SelectTypeOfHair').find(":selected").text()
-    document.getElementById("HairTypeInput").innerHTML = HairTypeInput;
-
-    var HairFlavorInput = $('#HairSelectFlavor').find(":selected").text()
-    document.getElementById("HairFlavorInput").innerHTML = HairFlavorInput;
-
     var HairQuantityInput = $('#HairSelectQuantity').find(":selected").text()
-    document.getElementById("HairQuantityInput").innerHTML = HairQuantityInput;
+    var HairTypeInput = $('#SelectTypeOfHair').find(":selected").text()
+    var HairFlavorInput = $('#HairSelectFlavor').find(":selected").text()
+    var match = HairQuantityInput.match(/(\d+)/)
+    var CompareQuantity = match[0]
 
-    // display user choice for Soap
+    if (CompareQuantity == 0){
+      document.getElementById("HairTypeInput").innerHTML = "You chose 0 piece";
+      document.getElementById("HairFlavorInput").innerHTML = "";
+      document.getElementById("HairQuantityInput").innerHTML = "";
+    } else {
+      document.getElementById("HairTypeInput").innerHTML = HairTypeInput;
+      document.getElementById("HairFlavorInput").innerHTML = HairFlavorInput;
+      document.getElementById("HairQuantityInput").innerHTML = HairQuantityInput;
+    };
+    
+    // display user choice for Shampoo 
     var SoapTypeInput = $('#SelectTypeSoap').find(":selected").text()
-    document.getElementById("SoapTypeInput").innerHTML = SoapTypeInput;
-
     var SoapFlavorInput = $('#SoapSelectFlavor').find(":selected").text()
-    document.getElementById("SoapFlavorInput").innerHTML = SoapFlavorInput;
-
     var SoapQuantityInput = $('#SoapSelectQuantity').find(":selected").text()
-    document.getElementById("SoapQuantityInput").innerHTML = SoapQuantityInput;
+    var match2 = SoapQuantityInput.match(/(\d+)/)
+    var CompareQuantity2 = match2[0]
+    
+    if (CompareQuantity2 == 0){
+      document.getElementById("SoapTypeInput").innerHTML = "You chose 0 piece";
+      document.getElementById("SoapFlavorInput").innerHTML = "";
+      document.getElementById("SoapQuantityInput").innerHTML = "";
+    } else {
+      document.getElementById("SoapTypeInput").innerHTML = HairTypeInput;
+      document.getElementById("SoapFlavorInput").innerHTML = HairFlavorInput;
+      document.getElementById("SoapQuantityInput").innerHTML = HairQuantityInput;
+    };
     
     // display user choice for Cream Body
     var CreamTypeInput = $('#CreamSelectType').find(":selected").text()
-    document.getElementById("CreamTypeInput").innerHTML = CreamTypeInput;
-
     var CreamFlavorInput = $('#CreamSelectFlavor').find(":selected").text()
-    document.getElementById("CreamFlavorInput").innerHTML = CreamFlavorInput;
-
     var CreamQuantityInput = $('#CreamSelectQuantity').find(":selected").text()
-    document.getElementById("CreamQuantityInput").innerHTML = CreamQuantityInput;
+    var match3 = CreamQuantityInput.match(/(\d+)/)
+    var CompareQuantity3 = match3[0]
+
+    if (CompareQuantity3 == 0){
+      document.getElementById("CreamTypeInput").innerHTML = "You chose 0 piece";
+      document.getElementById("CreamFlavorInput").innerHTML = "";
+      document.getElementById("CreamQuantityInput").innerHTML = "";
+    } else {
+      document.getElementById("CreamTypeInput").innerHTML = HairTypeInput;
+      document.getElementById("CreamFlavorInput").innerHTML = HairFlavorInput;
+      document.getElementById("CreamQuantityInput").innerHTML = HairQuantityInput;
+    };
 
     // display price
     var PS = document.getElementById("priceShampoo").innerHTML
@@ -93,34 +112,55 @@ function handleButtons(state){
     });
 
     // display user choice for Shampoo
-    var HairTypeInput = $('#SelectTypeOfHair').find(":selected").text()
-    document.getElementById("HairTypeInputP2").innerHTML = HairTypeInput;
-
-    var HairFlavorInput = $('#HairSelectFlavor').find(":selected").text()
-    document.getElementById("HairFlavorInputP2").innerHTML = HairFlavorInput;
-    
     var HairQuantityInput = $('#HairSelectQuantity').find(":selected").text()
-    document.getElementById("HairQuantityInputP2").innerHTML = HairQuantityInput;
+    var HairTypeInput = $('#SelectTypeOfHair').find(":selected").text()
+    var HairFlavorInput = $('#HairSelectFlavor').find(":selected").text()
+    var match = HairQuantityInput.match(/(\d+)/)
+    var CompareQuantity = match[0]
 
-    // display user choice for Soap
-    var SoapTypeInput = $('#SelectTypeSoap').find(":selected").text()
-    document.getElementById("SoapTypeInputP2").innerHTML = SoapTypeInput;
+    if (CompareQuantity == 0){
+      document.getElementById("HairTypeInputP2").innerHTML = "You chose 0 piece";
+      document.getElementById("HairFlavorInputP2").innerHTML = "";
+      document.getElementById("HairQuantityInputP2").innerHTML = "";
+    } else {
+      document.getElementById("HairTypeInputP2").innerHTML = HairTypeInput;
+      document.getElementById("HairFlavorInputP2").innerHTML = HairFlavorInput;
+      document.getElementById("HairQuantityInputP2").innerHTML = HairQuantityInput;
+    };
     
+    // display user choice for Shampoo 
+    var SoapTypeInput = $('#SelectTypeSoap').find(":selected").text()
     var SoapFlavorInput = $('#SoapSelectFlavor').find(":selected").text()
-    document.getElementById("SoapFlavorInputP2").innerHTML = SoapFlavorInput;
-
     var SoapQuantityInput = $('#SoapSelectQuantity').find(":selected").text()
-    document.getElementById("SoapQuantityInputP2").innerHTML = SoapQuantityInput;
+    var match2 = SoapQuantityInput.match(/(\d+)/)
+    var CompareQuantity2 = match2[0]
+    
+    if (CompareQuantity2 == 0){
+      document.getElementById("SoapTypeInputP2").innerHTML = "You chose 0 piece";
+      document.getElementById("SoapFlavorInputP2").innerHTML = "";
+      document.getElementById("SoapQuantityInputP2").innerHTML = "";
+    } else {
+      document.getElementById("SoapTypeInputP2").innerHTML = HairTypeInput;
+      document.getElementById("SoapFlavorInputP2").innerHTML = HairFlavorInput;
+      document.getElementById("SoapQuantityInputP2").innerHTML = HairQuantityInput;
+    };
     
     // display user choice for Cream Body
     var CreamTypeInput = $('#CreamSelectType').find(":selected").text()
-    document.getElementById("CreamTypeInputP2").innerHTML = CreamTypeInput;
-    
     var CreamFlavorInput = $('#CreamSelectFlavor').find(":selected").text()
-    document.getElementById("CreamFlavorInputP2").innerHTML = CreamFlavorInput;
-
     var CreamQuantityInput = $('#CreamSelectQuantity').find(":selected").text()
-    document.getElementById("CreamQuantityInputP2").innerHTML = CreamQuantityInput;
+    var match3 = CreamQuantityInput.match(/(\d+)/)
+    var CompareQuantity3 = match3[0]
+
+    if (CompareQuantity3 == 0){
+      document.getElementById("CreamTypeInputP2").innerHTML = "You chose 0 piece";
+      document.getElementById("CreamFlavorInputP2").innerHTML = "";
+      document.getElementById("CreamQuantityInputP2").innerHTML = "";
+    } else {
+      document.getElementById("CreamTypeInputP2").innerHTML = HairTypeInput;
+      document.getElementById("CreamFlavorInputP2").innerHTML = HairFlavorInput;
+      document.getElementById("CreamQuantityInputP2").innerHTML = HairQuantityInput;
+    };
 
     // display price
     var PS = document.getElementById("priceShampoo").innerHTML

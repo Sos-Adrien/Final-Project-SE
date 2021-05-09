@@ -6,11 +6,11 @@ from sqlalchemy import create_engine
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:websitedb@35.242.251.167:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:websitedb@35.242.251.167:5432/dbpostgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-engine = create_engine('postgresql://postgres:websitedb@35.242.251.167:5432/postgres')
+engine = create_engine('postgresql://postgres:websitedb@35.242.251.167:5432/dbpostgres')
 
-from greenit_website.app import Shampoo, Soap, Cream
+from app import Shampoo, Soap, Cream
 from sqlalchemy.orm import sessionmaker
 
 Session = sessionmaker(bind=engine)

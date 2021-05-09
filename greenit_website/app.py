@@ -9,9 +9,9 @@ from sqlalchemy import create_engine
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:websitedb@35.242.251.167:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:websitedb@35.242.251.167:5432/dbpostgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-engine = create_engine('postgresql://postgres:websitedb@35.242.251.167:5432/postgres')
+engine = create_engine('postgresql://postgres:websitedb@35.242.251.167:5432/dbpostgres')
 
 from sqlalchemy.orm import sessionmaker
 
@@ -39,7 +39,7 @@ class Cream(db.Model):
     value = db.Column(db.String(100))
 
 
-class Order(db.Model):
+class Command(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
     contact = db.Column(db.String(100))
@@ -79,7 +79,7 @@ def index():
 def order_submit():
     data = request.get_json()
 
-    new_order = Order(
+    new_order = Command(
         name=data['first_name'],
         contact=data['contact'],
         pickup=data['Pickup'],
