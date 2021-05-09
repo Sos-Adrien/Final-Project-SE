@@ -277,16 +277,13 @@ h19 {
 
 .imagetop{
     width: 8%;
-    min-width: 80px;
     max-width: 110px;
     height: auto;
 }
 
 .imageDescription1{
     width: 50%;
-    min-width: 130px;
     max-width: 140px;
-    display: block;
     height: auto;
     margin-bottom: 1vh;
     margin-top: 2vh;
@@ -294,8 +291,6 @@ h19 {
 
 .imageDescription2{
     width: 30%;
-    min-width: 90px;
-    display: block;
     height: auto;
     margin-bottom: 2vh;
     margin-top: 2vh;
@@ -303,16 +298,12 @@ h19 {
 
 .imageDescription3{
     width: 20%;
-    min-width: 60px;
-    display: block;
     height: auto;
     transform: rotate(45deg);
 }
 
 .imageDescription4{
     width: 10%;
-    min-width: 90px;
-    display: block;
     height: auto;
 }
 
