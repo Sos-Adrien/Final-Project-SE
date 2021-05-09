@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head><title> Greenit MVP </title></head>
+  <head>
+    <title> Greenit MVP </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
   <head>
     <!-- the page title will be a varible passed to the render_template() function for each page separately-->
     <title> {{ page_title }}</title>
@@ -29,9 +32,8 @@
       </div>
       
       <div class="logotop">
-        <img src="https://1.bp.blogspot.com/-HvynhE-Oa7c/YGHiwYxBCwI/AAAAAAAAAJs/Y05-0LJU8Vg6EZHOvUt9do6w6Sf0ygMIQCLcBGAsYHQ/s1064/logo.png" class="imagetop"> 
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" class="imagetop"> 
       </div>
-      
     </header>
     
     <div class="container">
@@ -41,7 +43,7 @@
       <div id="content1">
         <h3>Customize your product for your needs</h3>
         <div class="incontainer">
-          <img src="{{ url_for('static', filename='images/soap.png') }}" class="imageDescription1">
+          <img src="{{ url_for('static', filename='images/soap.png') }}" width="50" height="60">
         </div>
         <div class="incontainer">
           <img src="/static/images/subimage1.png" class="imageDescriptionSub">
