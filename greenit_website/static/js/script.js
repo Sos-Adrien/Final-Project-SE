@@ -18,12 +18,23 @@ function hideAllSlides() {
 
 function handleButtons(state){
   if (state === 0){
+    // smoothly scroll to the top of the container
+    var element = document.getElementById("main");
+    element.scrollIntoView({
+      behavior: 'smooth'
+    });
+    
     $('#previous').prop('disabled', true).hide()
   } else {
     $('#previous').prop('disabled', false).show()
   }
 
   if (state === 1){
+    // smoothly scroll to the top of the container
+    var element = document.getElementById("main");
+    element.scrollIntoView({
+      behavior: 'smooth'
+    });
 
     // display user choice for Shampoo
     var HairTypeInput = $('#SelectTypeOfHair').find(":selected").text()
@@ -75,6 +86,12 @@ function handleButtons(state){
     document.getElementById("next").innerHTML = "Next"
 
   } else if (state === 2){
+    // smoothly scroll to the top of the container
+    var element = document.getElementById("main");
+    element.scrollIntoView({
+      behavior: 'smooth'
+    });
+
     // display user choice for Shampoo
     var HairTypeInput = $('#SelectTypeOfHair').find(":selected").text()
     document.getElementById("HairTypeInputP2").innerHTML = HairTypeInput;
@@ -128,6 +145,12 @@ function handleButtons(state){
   if (state === 3){
     $('#next').prop('disabled', true).hide()
     $('#previous').prop('disabled', true).hide()
+
+    // smoothly scroll to the top of the container
+    var element = document.getElementById("main");
+    element.scrollIntoView({
+      behavior: 'smooth'
+    });
 
     // trigger data input in database
       
