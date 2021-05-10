@@ -107,7 +107,7 @@ h3 {
     font-family: MyWebFontRegular;
     display: inline-block;
     color:#9ED0FB; 
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 0px;
     max-width: 400px;
 }
@@ -116,7 +116,7 @@ h4 {
     font-family: MyWebFontRegular;
     display: inline-block;
     color:#A3E6DE; 
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 0px;
     max-width: 400px;
     margin-bottom: 30px;
@@ -126,7 +126,7 @@ h5 {
     font-family: MyWebFontRegular;
     display: inline-block;
     color:#9AE3B4; 
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 0px;
     max-width: 400px;
     margin-bottom: 20px;
@@ -498,7 +498,6 @@ h19 {
             "textWhy4";
     }
 }
-
 
 /*image css for the section 3 below */
 

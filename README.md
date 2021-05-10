@@ -37,9 +37,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:YOUR_PASSWORD@INS
 All tables are defined in app.py, to format your database run from your virtual environment:
 cd greenit_website
 python
->>> from app import db 
->>> db.create_all()
->>> exit()
+from app import db 
+db.create_all()
+exit()
 
 the database is prepopulated in seed.py:
 After changing your inputs you can run it in your virtual environment using:
