@@ -63,9 +63,9 @@ function handleButtons(state){
       document.getElementById("SoapFlavorInput").innerHTML = "";
       document.getElementById("SoapQuantityInput").innerHTML = "";
     } else {
-      document.getElementById("SoapTypeInput").innerHTML = HairTypeInput;
-      document.getElementById("SoapFlavorInput").innerHTML = HairFlavorInput;
-      document.getElementById("SoapQuantityInput").innerHTML = HairQuantityInput;
+      document.getElementById("SoapTypeInput").innerHTML = SoapTypeInput;
+      document.getElementById("SoapFlavorInput").innerHTML = SoapFlavorInput;
+      document.getElementById("SoapQuantityInput").innerHTML = SoapQuantityInput;
     };
     
     // display user choice for Cream Body
@@ -80,9 +80,9 @@ function handleButtons(state){
       document.getElementById("CreamFlavorInput").innerHTML = "";
       document.getElementById("CreamQuantityInput").innerHTML = "";
     } else {
-      document.getElementById("CreamTypeInput").innerHTML = HairTypeInput;
-      document.getElementById("CreamFlavorInput").innerHTML = HairFlavorInput;
-      document.getElementById("CreamQuantityInput").innerHTML = HairQuantityInput;
+      document.getElementById("CreamTypeInput").innerHTML = CreamTypeInput;
+      document.getElementById("CreamFlavorInput").innerHTML = CreamFlavorInput;
+      document.getElementById("CreamQuantityInput").innerHTML = CreamQuantityInput;
     };
 
     // display price
