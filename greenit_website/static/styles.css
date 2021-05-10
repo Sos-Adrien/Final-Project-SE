@@ -965,6 +965,7 @@ h19 {
     margin-top: 4px;
     display: inline;
     width: 12%;
+    min-width: 15px;
     height: 12%;
 }
   
