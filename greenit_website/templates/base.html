@@ -43,7 +43,7 @@
       <div id="content1">
         <h3>Customize your product for your needs</h3>
         <div class="incontainer">
-          <img src="{{ url_for('static', filename='images/soap.png') }}" width="50" height="60">
+          <img src="{{ url_for('static', filename='images/soap.png') }}" class="imageDescription1">
         </div>
         <div class="incontainer">
           <img src="/static/images/subimage1.png" class="imageDescriptionSub">
@@ -166,7 +166,7 @@
             </div>
             
             <div class="TOHdiv2">
-              <select name="TypeOfHair" id="SelectTypeOfHair">
+              <select name="TypeOfHair" id="SelectTypeOfHair" class="select">
                 {% for TypeHair in DataHairType %}
                   <option style="font-family: Arial, Helvetica, sans-serif"> {{ TypeHair.value }} </option>
                 {% endfor %}
@@ -181,7 +181,7 @@
             </div>
             
             <div class="TOHdiv2">
-              <select name="FlavorOfHair" id="HairSelectFlavor">
+              <select name="FlavorOfHair" id="HairSelectFlavor" class="select">
                 {% for HairFlavor in DataHairFlavor %}
                   <option style="font-family: Arial, Helvetica, sans-serif"> {{ HairFlavor.value }} </option>
                 {% endfor %}
@@ -197,7 +197,7 @@
             </div>
             
             <div class="TOHdiv2">
-              <select name="Quantity" id="HairSelectQuantity">
+              <select name="Quantity" id="HairSelectQuantity" class="select">
                 <option value="quantity0" style="font-family: Arial, Helvetica, sans-serif"> 0 piece  ⬇️</option>
                 <option value="quantity1" style="font-family: Arial, Helvetica, sans-serif"> 1 piece </option>
                 <option value="quantity2" style="font-family: Arial, Helvetica, sans-serif"> 2 pieces </option>
@@ -246,7 +246,7 @@
             </div>
             
             <div class="TOHdiv2"> 
-              <select name="TypeOfBodySkin" id="SelectTypeSoap">
+              <select name="TypeOfBodySkin" id="SelectTypeSoap" class="select">
                 {% for TypeBodySkin in DataBodySkin %}
                   <option style="font-family: Arial, Helvetica, sans-serif"> {{ TypeBodySkin.value }} </option>
                 {% endfor %}
