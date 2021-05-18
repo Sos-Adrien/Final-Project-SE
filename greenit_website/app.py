@@ -3,6 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+
 from flask import Flask, render_template, request, jsonify, make_response
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
@@ -19,7 +20,6 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 db = SQLAlchemy(app)
-
 
 class Shampoo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
