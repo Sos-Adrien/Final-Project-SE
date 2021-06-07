@@ -1,1 +1,1 @@
-from greenit_website.app import app
+from greenit_website.newapp import app
