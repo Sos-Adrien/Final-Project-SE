@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Greenit MVP </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <head>
+    <!-- the page title will be a varible passed to the render_template() function for each page separately-->
+    <title> {{ page_title }}</title>
+  	<meta charset="utf-8"/>
+
+    <!-- include the css from the file static/style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  </head>
+
+  <body>
+  
+    <header class="header2">
+    </header>
+
+    <header class="header">
+      <div class="atthetopbanner">
+        <div class="topbannertext">
+          <h1> Greenit </h1>
+          <h2> New healthy, social and sustainable consumption. </h2>
+        </div> 
+      </div>
+      
+      <div class="logotop">
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" class="imagetop"> 
+      </div>
+    </header>
+    
+    <div class="container">
+
+      <div id="top">How does it work?</div>
+
+      <div id="content1">
+        <h3>Customize the products for your needs</h3>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/soap.png') }}" class="imageDescription1">
+        </div>
+        <div class="incontainer">
+          <img src="/static/images/subimage1.png" class="imageDescriptionSub">
+        </div>
+        
+      </div>
+      
+      <div id="content2">
+        <h4>Pick your local producer</h4>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/murser.png') }}" class="imageDescription2">
+        </div> 
+        <div class="incontainer">
+          <img src="/static/images/subimage2.png" class="imageDescriptionSub">
+        </div>   
+      </div>
+      
+      <div id="content3">
+        <h5>Get your homemade products locally</h5>
+        <div class="incontainer">
+          <img src="{{ url_for('static', filename='images/getStarted.png') }}" class="imageDescription3">
+        </div>  
+        <div class="incontainer">
+          <img src="/static/images/subimage3.png" class="imageDescriptionSub">
+        </div>  
+      </div>
+
+    </div>
+    
+    <header class="header3">
+      <div class="atthetopbanner">
+        <div class="topbannertext">
+          <h2> Orders cannot be done for now... </h2><br>
+          <br>
+          <h2> Adrien's products are comming back in september with improved recipes and sexier website (hopefully 😅)</h2>
+          <br>
+          <br>
+          <h16> Leave your contact and I'll keep you updated 👇 </h16>
+          <br>
+          <br>
+          <div class="divmargin">
+            <div style="justify-content: center;display: flex;margin-top: 15px;">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZW-l266w_GYaM9wzahSQPtB_pARahA4zLRjmKRsHnN3aHVA/viewform?embedded=true" width="540" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+          </div>
+
+        </div> 
+      </div>
+    </header>
+
+    <footer class="footer">
+      <div class="Inlinediv2">
+        <div class="Bottomdiv">
+          <h2> Greenit MVP foundations fall 2020 </h2> <br>
+          <br><h19> contact: adrien.sosson@code.berlin </h19> <br>
+        </div>   
+      </div>
+    </footer>
+
+    <footer class="footer2">
+    </footer>
+  
+  </body>
+
+</html>

@@ -64,7 +64,7 @@ def index():
     CreamDataFlavor = Cream.query.filter_by(type="CreamFlavor").all()
 
     return render_template(
-        'base.html',
+        'newbase.html',
         page_title="base",
         DataHairType=list(ShampooDataHairType),
         DataHairFlavor=list(ShampooDataHairFlavor),
